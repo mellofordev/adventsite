@@ -59,6 +59,18 @@ export default function Home() {
           <div className='rightSideIntro'>
             <h1>Let's go It's Advent May 30,2023</h1>
           </div>
+          <div className='mobileView'>
+          </div>
+          <div className='mobileTextMove'>
+                  <div  className='flexRowContainer'>
+                    <h1>advent'23</h1>
+                    <h1>engineering</h1>
+                    <h1>playground</h1>
+                    <h1>advent'23</h1>
+                    <h1>engineering</h1>
+                    <h1>playground</h1>
+                  </div>
+          </div>
           <div className='rightSideVid'>
             <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/kRQZ803JrbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
           </div>
