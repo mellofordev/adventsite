@@ -60,7 +60,7 @@ export default function Home() {
             <h1>Let's go It's Advent May 30,2023</h1>
           </div>
           <div className='rightSideVid'>
-            <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/AxHXEPwPsZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
+            <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/kRQZ803JrbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
           </div>
           </div>
         </div>
