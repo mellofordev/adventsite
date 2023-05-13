@@ -32,7 +32,6 @@
 
 @media (max-width: 600px) {
   .main{
-    padding: 6rem;
     justify-content: center;
     align-items: center;
   }

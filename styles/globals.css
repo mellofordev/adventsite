@@ -164,7 +164,7 @@ a {
   font-family: 'retrolight';
   font-weight:lighter;
   font-style: normal;
-  color: #428EFF;
+  color: #43c0ec;
 }
 .boxTimer h2{
   font-size: 30px;
@@ -205,10 +205,12 @@ a {
     align-items: center;
     margin-top: 0px;
     margin-bottom: 30px;
+    width: 0;
+    padding: 30px;
   }
   .boxTimer{
     border-radius: 15px;
-    width: 200px;
+    width: 5.2rem;
     margin: 5px;
     font-size: 30px;
     padding: 10px;
@@ -216,8 +218,11 @@ a {
   .boxTimer:hover{
     background-color: #ff5145;
   }
+  .boxTimer h1:hover{
+    color: white;
+  }
   .boxTimer h2{
-    font-size: 20px;
+    font-size: 1rem;
   }
   .rightSide{
     justify-content: center;
@@ -237,6 +242,7 @@ a {
   .rightSideVid{
     display: none;
   }
+
   .firstViewer img{
     height: 600px;
     width: 100vw;
