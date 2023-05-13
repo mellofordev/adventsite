@@ -206,11 +206,11 @@ a {
     margin-top: 0px;
     margin-bottom: 30px;
     width: 0;
-    padding: 30px;
+    padding: 0px;
   }
   .boxTimer{
     border-radius: 15px;
-    width: 5.2rem;
+    width: 5rem;
     margin: 5px;
     font-size: 30px;
     padding: 10px;
@@ -242,8 +242,11 @@ a {
   .rightSideVid{
     display: none;
   }
-
+  .firstViewer{
+    margin-top:2rem;
+  }
   .firstViewer img{
+    border-radius: 0px;
     height: 600px;
     width: 100vw;
   }
@@ -263,8 +266,9 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width:95vw;
     border-radius: 55px;
+    background-color: #ff5145;
   }
   .aboutTextContainer{
     flex-direction: column;
