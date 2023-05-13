@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <header className='header'>
-        <Image src={advent_logo} style={{height:70,width:70,margin:10}}/>
+        <Image src={advent_logo} className='headerImg'/>
         <nav className='navitems'>
           <a href='#'>home</a>
           <a href='#'>about</a>
@@ -60,6 +60,7 @@ export default function Home() {
             <h1>Let's go It's Advent May 30,2023</h1>
           </div>
           <div className='mobileView'>
+            <img src='https://io.google/2023/app/images/extend-cta-dark.svg' style={{marginLeft:60}}/>
           </div>
           <div className='mobileTextMove'>
                   <div  className='flexRowContainer'>
