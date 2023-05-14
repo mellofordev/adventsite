@@ -246,20 +246,21 @@ a {
     display: none;
   }
   .firstViewer{
-    margin-top:2rem;
+    margin-top:0rem;
   }
   .firstViewer img{
     border-radius: 35px;
     height: 600px;
     width: 100vw;
-    filter: brightness(0.4);
+    filter: brightness(.6);
+    
   }
   .firstViewer h2{
     position: absolute;
     font-size: 25px;
     line-height: 30px;
     text-align: center;
-    padding: 0px;
+    padding: 5px;
   
   }
 
@@ -319,7 +320,7 @@ a {
     height: 40vh;
   }
   .mobileTextMove{
-    display: flex;
+    display: none;
     flex-direction: row;
     height: 30vh;
     background-image: linear-gradient(
