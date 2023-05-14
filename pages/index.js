@@ -39,19 +39,19 @@ export default function Home() {
         <div className='flexContainer'>
           <div className='timeContainer'>
             <div className='boxTimer'>
-              <h1>{day}</h1>
+              <h1>{day < 10==true? '0'+day : day}</h1>
               <h2>Days</h2>
             </div>
             <div className='boxTimer'>
-              <h1>{hour}</h1>
+              <h1>{hour < 10==true? '0'+hour :hour }</h1>
               <h2>Hours</h2>
             </div>
             <div className='boxTimer'>
-              <h1>{minute}</h1>
+              <h1>{minute < 10==true? '0'+minute : minute}</h1>
               <h2>Minutes</h2>
             </div>
             <div className='boxTimer'>
-              <h1>{second}</h1>
+              <h1>{second < 10==true? '0'+second : second}</h1>
               <h2>Seconds</h2>
             </div>
           </div>
@@ -83,6 +83,7 @@ export default function Home() {
           <button className='firstViewerButton'>explore events</button>
         </div>
         <div className='overviewContainer'>
+          <h1>Dive into the future</h1>
           <div className='overviewBoxContainer'>
             <img src='https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'/>
             <h2>Tech Expo</h2>

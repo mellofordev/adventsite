@@ -118,6 +118,9 @@ a {
   align-items: center;
   margin: 30px;
 }
+.overviewContainer h1{
+  display: none;
+}
 .overviewBoxContainer{
   display: flex;
   flex-direction: column;
@@ -246,9 +249,10 @@ a {
     margin-top:2rem;
   }
   .firstViewer img{
-    border-radius: 0px;
+    border-radius: 35px;
     height: 600px;
     width: 100vw;
+    filter: brightness(0.4);
   }
   .firstViewer h2{
     position: absolute;
@@ -295,7 +299,20 @@ a {
     background-color: white;
   }
   .overviewContainer{
-    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+  }
+  .overviewContainer h1{
+    display: block;
+  }
+  .overviewBoxContainer{
+    border-radius: 25px;
+    margin-bottom: 30px;
+    border: 1px solid white;
+  }
+  .overviewBoxContainer img{
+    width: 350px;
   }
   .mobileView{
     display: flex;
