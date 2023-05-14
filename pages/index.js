@@ -1,81 +1,57 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import tabstyles from '../styles/TopNavComponent.module.css';
 import {motion} from 'framer-motion';
-import advent_logo from '../public/advent_color_logo_bg.png';
 import advent_logo_black from '../public/advent_logo_black.png';
+import advent_logo from '../public/advent_color_logo_bg.png';
 import wrap from '../public/wrap.svg';
 import { useEffect, useState } from 'react';
+import TopNavComponent from './TopNavComponent';
+import TimeCounter from './TimeCounter';
 
 export default function Home() {
-  const counter = new Date("May 30,2023 09:30:00").getTime();
-  const [day,setDay] = useState(0);
-  const [hour,setHour] = useState(0);
-  const [minute,setMinute] = useState(0);
-  const [second,setSecond] = useState(0);
-  useEffect(()=>{
-    setInterval(()=>{
-      var now = new Date().getTime();
-      var timelapsed = counter-now;
-      var min = Math.floor((timelapsed%(1000*60*60))/(1000*60));
-      var sec = Math.floor((timelapsed%(1000*60))/1000);
-      setDay(Math.floor(timelapsed/(1000*60*60*24)));
-      setHour(Math.floor((timelapsed%(1000*60*60*24))/(1000*60*60)));
-      setMinute(min);
-      setSecond(sec)
-    },1000)
-  },[second])
+  const overview_data = [{id:1,name:'Tech expo',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
+                         {id:2,name:'Proshow',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
+                         {id:3,name:'Workshops',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'}
+                        ];
+  const sponsors = [{id:1,pic:'https://i.pinimg.com/originals/a7/23/b9/a723b9d7887212078aaa89e3697b217a.png'},
+                        {id:2,pic:'https://cdn.shopify.com/s/files/1/0067/0374/3040/files/white_240x240.png?v=1648004714'},
+                        {id:3,pic:'https://worldissmall.fr/wp-content/uploads/2023/02/nothing-phone-logo.jpg'}
+                       ];
+  const [isopened,setOpened]=useState(false);
+  const [isscroll,setScroll] = useState(true);
   return (
-    <div className={styles.container}>
-      <header className='header'>
-        <Image src={advent_logo} className='headerImg'/>
-        <nav className='navitems'>
-          <a href='#'>home</a>
-          <a href='#'>about</a>
-          <a href='#'>events</a>
-          <a href='#'>cult 11</a>
-        </nav>
-      </header>
+    <>
+    <div className={styles.container} >
+      {isopened==true && 
+        <div className={isopened==true ? 'animatebox' :'animateboxback'} style={{height:'100vh',zIndex:100}}>
+                <div className={tabstyles.header}>
+                 <Image src={advent_logo} className={tabstyles.headerImg}/>
+                  <button className={tabstyles.hamburger} onClick={()=>{setOpened(false);setScroll(true)}}>
+                  <span className="material-symbols-outlined">close</span></button>
+                </div>
+                <div className='flexMenu'>
+                  <a>home</a>
+                  <a>about</a>
+                  <a>events</a>
+                </div>
+        </div>
+      }
+      <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
       <div className={styles.main}>
         <div className='flexContainer'>
-          <div className='timeContainer'>
-            <div className='boxTimer'>
-              <h1>{day < 10==true? '0'+day : day}</h1>
-              <h2>Days</h2>
-            </div>
-            <div className='boxTimer'>
-              <h1>{hour < 10==true? '0'+hour :hour }</h1>
-              <h2>Hours</h2>
-            </div>
-            <div className='boxTimer'>
-              <h1>{minute < 10==true? '0'+minute : minute}</h1>
-              <h2>Minutes</h2>
-            </div>
-            <div className='boxTimer'>
-              <h1>{second < 10==true? '0'+second : second}</h1>
-              <h2>Seconds</h2>
-            </div>
-          </div>
+          <TimeCounter/>
           <div className='rightSide'>
-          <div className='rightSideIntro'>
-            <h1>Let's go It's Advent May 30,2023</h1>
-          </div>
-          <div className='mobileView'>
-            <img src={wrap.src} style={{marginLeft:0}}/>
-          </div>
-          <div className='mobileTextMove'>
-                  <div  className='flexRowContainer'>
-                    <h1>advent'23</h1>
-                    <h1>engineering</h1>
-                    <h1>playground</h1>
-                    <h1>advent'23</h1>
-                    <h1>engineering</h1>
-                    <h1>playground</h1>
-                  </div>
-          </div>
-          <div className='rightSideVid'>
-            <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/kRQZ803JrbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
-          </div>
+            <div className='rightSideIntro'>
+              <h1>Let's go It's Advent May 30,2023</h1>
+            </div>
+            <div className='mobileView'>
+              <motion.img initial={{opacity:0,marginRight:-205}} whileInView={{opacity:1,marginRight:137}} transition={{duration:3}} src={wrap.src} style={{marginLeft:0}}/>
+            </div>
+            <div className='rightSideVid'>
+              <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/kRQZ803JrbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
+            </div>
           </div>
         </div>
         <div className='firstViewer'>
@@ -85,27 +61,64 @@ export default function Home() {
         </div>
         <div className='overviewContainer'>
           <h1>Dive into the future</h1>
-          <div className='overviewBoxContainer'>
-            <img src='https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'/>
-            <h2>Tech Expo</h2>
-          </div>
-          <div className='overviewBoxContainer'>
-            <img src='https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'/>
-            <h2>Proshow</h2>
-          </div>
-          <div className='overviewBoxContainer'>
-            <img src='https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'/>
-            <h2>Workshops</h2>
-          </div>
+          {overview_data.map((i)=>{
+            return(
+              <motion.div key={i.id} className='overviewBoxContainer'
+              initial={{opacity:0,transform:'translate(-100px)'}}
+              whileInView={{opacity:1,transform:'translate(0px)'}}
+              transition={{ ease: "easeOut", duration: 0.8 }}
+               >
+                <img src={i.pic}/>
+                <h2>{i.name}</h2>
+              </motion.div>
+            );
+          }) 
+          }
         </div>
-        <div className='aboutContainer'>
+        <motion.div initial={{opacity:0,backgroundColor:'transparent'}} whileInView={{opacity:1,backgroundColor:'#DADCE0'}} transition={{ease
+        :'easeIn',duration:2}} className='aboutContainer'>
           <div className='aboutTextContainer'>
             <h1>Advent is the annual tech fest brought to you by Cult a way </h1>
             <button className='buttonMain'>See the legacy</button>
           </div>
           <Image src={advent_logo_black} className='aboutImage'/>
+        </motion.div>
+        <div className='patternflex'>
+          <motion.div initial={{transform:'translateY(-100px)',opacity:0}} whileInView={{transform:'translateY(0px)',opacity:1}} transition={{duration:2}} className='circlePattern'></motion.div>
+          <motion.div initial={{transform:'translateX(100px)',opacity:0}} whileInView={{transform:'translateX(0px)',opacity:1}} transition={{duration:2}} className='recPattern'></motion.div>
+        </div>
+        <div className='aboutContainer' style={{backgroundColor:'transparent',marginTop:50,borderRadius:20}}>
+          <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
+            <h1 style={{color:'white'}}>Campus Ambassador</h1>
+            <button className='buttonMain' style={{color:'black',borderColor:'#428EFF',backgroundColor:'#428EFF'}}>Apply now</button>
+          </div>
+        </div>
+        <div className='overviewContainer'>
+          <h1>Our sponsors</h1>
+          {sponsors.map((i)=>{
+            return(
+              <motion.div key={i.id} className='overviewBoxContainer'
+              initial={{opacity:0,transform:'translateY(-100px)'}}
+              whileInView={{opacity:1,transform:'translateY(0px)'}}
+              transition={{ ease: "easeOut", duration: 0.8 }}
+               >
+                <img src={i.pic}/>
+              </motion.div>
+            );
+          }) 
+          }
         </div>
       </div>
     </div>
+    <div style={{display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',color:'white',borderTopColor:'white',border:1,backgroundColor:'#202124',padding:10}}>
+        <h1>Advent'23</h1>
+        <div style={{display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',margin:30,color:'white'}}>
+          <p>Team</p>
+          <p>Cult a way</p>
+          <p>Brand Guidelines</p>
+          <p>#legacyliveson</p>
+        </div>
+      </div>
+    </>
   )
 }
