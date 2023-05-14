@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import {motion} from 'framer-motion';
 import advent_logo from '../public/advent_color_logo_bg.png';
 import advent_logo_black from '../public/advent_logo_black.png';
+import wrap from '../public/wrap.svg';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -60,7 +61,7 @@ export default function Home() {
             <h1>Let's go It's Advent May 30,2023</h1>
           </div>
           <div className='mobileView'>
-            <img src='https://io.google/2023/app/images/extend-cta-dark.svg' style={{marginLeft:60}}/>
+            <img src={wrap.src} style={{marginLeft:0}}/>
           </div>
           <div className='mobileTextMove'>
                   <div  className='flexRowContainer'>

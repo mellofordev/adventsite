@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1270" height="867" viewBox="0 0 1270 867" fill="none">
+<mask id="mask0_717_70" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="1270" height="867">
+<path d="M0 0H1269.42V866.913H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_717_70)">
+<path d="M3.13501 865.794L384.742 553.638H884.662L1266.28 865.794H3.13501Z" stroke="#E8EAED" stroke-width="3.62567" stroke-miterlimit="10"/>
+<path d="M256.846 865.794L485.158 553.638H784.267L1012.58 865.794H256.846Z" stroke="#E8EAED" stroke-width="3.62567" stroke-miterlimit="10"/>
+<path d="M279.641 639.616H989.78M140.964 753.048H1128.46M499.204 865.794L581.076 553.638H688.344L770.216 865.794H499.204ZM1266.28 1.11865L884.662 313.279H384.742L3.13501 1.12072L1266.28 1.11865Z" stroke="#E8EAED" stroke-width="3.62567" stroke-miterlimit="10"/>
+<path d="M1012.58 1.11865L784.267 313.279H485.158L256.846 1.12072L1012.58 1.11865Z" stroke="#E8EAED" stroke-width="3.62567" stroke-miterlimit="10"/>
+<path d="M989.78 227.299H279.641M1128.46 113.867H140.962M770.216 1.11865L688.344 313.279H581.076L499.204 1.12072L770.216 1.11865Z" stroke="#E8EAED" stroke-width="3.62567" stroke-miterlimit="10"/>
+</g>
+</svg>

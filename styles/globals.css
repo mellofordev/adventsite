@@ -238,7 +238,7 @@ a {
     width: 95vw;
     padding: 30px;
     height: fit-content;
-    background-image: url('https://io.google/2023/app/images/about-header-static.svg');
+    background-image: url('../public/letsgo.svg');
     background-repeat: no-repeat;
     background-position-x:230px;
   }
@@ -250,10 +250,9 @@ a {
   }
   .firstViewer img{
     border-radius: 35px;
-    height: 600px;
+    height: 500px;
     width: 100vw;
     filter: brightness(.6);
-    
   }
   .firstViewer h2{
     position: absolute;
@@ -273,12 +272,13 @@ a {
     align-items: center;
     width:95vw;
     border-radius: 55px;
-    background-color: #ff5145;
+    background-color: #DADCE0;
+    border:1px solid white;
   }
   .aboutTextContainer{
     flex-direction: column;
     justify-content: flex-start;
-    color: #202124;
+    color: black;
     padding: 10px;
     width: 100%;
     text-align: left;
@@ -295,9 +295,12 @@ a {
   }
   .buttonMain{
     width: 200px;
+    color:black;
+    border:  1px solid black;
   }
   .buttonMain:hover{
-    background-color: white;
+    background-color:#202124;
+    color:white ;
   }
   .overviewContainer{
     flex-direction: column;
@@ -317,7 +320,14 @@ a {
   }
   .mobileView{
     display: flex;
-    height: 40vh;
+    height:40vh;
+    overflow-y: hidden;
+  }
+  .mobileView img{
+    object-fit: cover;
+    height: 300px;
+    transform: rotate(35deg);
+    margin-right: 410px;
   }
   .mobileTextMove{
     display: none;
