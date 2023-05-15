@@ -17,7 +17,7 @@ export default function MobileNav({setOpened,setScroll}){
                   <Link href={'/'} className={router.asPath=='/' ? 'linkitem linkitemactive':'linkitem'}>home</Link>
                   <Link href={'/about'} className={router.asPath=='/about' ? 'linkitem linkitemactive':'linkitem'}>about</Link>
                   <Link href={'/events'} className={router.asPath=='/events' ? 'linkitem linkitemactive':'linkitem'}>events</Link>
-                  <Link href={'/cult11'} className={router.asPath=='/cult11' ? 'linkitem linkitemactive':'linkitem'}>cult11</Link>
+                  <Link target={'_blank'} href={'https://www.cultaway.in'} className={router.asPath=='/cult11' ? 'linkitem linkitemactive':'linkitem'}>cult11</Link>
                 </div>
         </div>
     );
