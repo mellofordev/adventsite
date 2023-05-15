@@ -30,6 +30,7 @@ export default function TimeCounter(){
       },1000)
     },[second])
     return(
+    <>
     <div className='timeContainer'>
         <div className='boxTimer' onClick={()=>{
             tom.play();
@@ -53,5 +54,17 @@ export default function TimeCounter(){
           <h2>Seconds</h2>
         </div>
       </div>
+      {/* <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around',backgroundColor:'black',borderRadius:25,width:100,height:'fit-content',padding:5}}>
+        <button style={{backgroundColor:'transparent',border:'none'}}>
+        <span style={{color:'white'}} class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <button style={{backgroundColor:'transparent',border:'none'}}>
+          <span style={{color:'white'}} class="material-symbols-outlined">info</span>
+        </button>
+      </div> */}
+      {/* <div style={{position:'absolute',backgroundColor:'#202124',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',zIndex:100,height:200,width:300,borderRadius:25}}>
+         <p style={{textAlign:'center'}}>Beat maker - Click on the timer box to create your unique beats...</p>
+      </div> */}
+    </>
     );
 }

@@ -1,15 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css';
-import tabstyles from '../styles/TopNavComponent.module.css';
 import {motion} from 'framer-motion';
 import advent_logo_black from '../public/advent_logo_black.png';
-import advent_logo from '../public/advent_color_logo_bg.png';
+
 import wrap from '../public/wrap.svg';
 import { useEffect, useState } from 'react';
 import TopNavComponent from './TopNavComponent';
 import TimeCounter from './TimeCounter';
-
+import MobileNav from './MobileNav';
+import Footer from './Footer';
 export default function Home() {
   const overview_data = [{id:1,name:'Tech expo',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
                          {id:2,name:'Proshow',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
@@ -23,21 +23,11 @@ export default function Home() {
   const [isscroll,setScroll] = useState(true);
   return (
     <>
+    {isopened==true && 
+        <MobileNav setOpened={setOpened} setScroll={setScroll}/>
+    }
     <div className={styles.container} >
-      {isopened==true && 
-        <div className={isopened==true ? 'animatebox' :'animateboxback'} style={{height:'100vh',zIndex:100}}>
-                <div className={tabstyles.header}>
-                 <Image src={advent_logo} className={tabstyles.headerImg}/>
-                  <button className={tabstyles.hamburger} onClick={()=>{setOpened(false);setScroll(true)}}>
-                  <span className="material-symbols-outlined">close</span></button>
-                </div>
-                <div className='flexMenu'>
-                  <a>home</a>
-                  <a>about</a>
-                  <a>events</a>
-                </div>
-        </div>
-      }
+
       <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
       <div className={styles.main}>
         <div className='flexContainer'>
@@ -110,15 +100,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <div style={{display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',color:'white',borderTopColor:'white',border:1,backgroundColor:'#202124',padding:10}}>
-        <h1>Advent'23</h1>
-        <div style={{display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start',margin:30,color:'white'}}>
-          <p>Team</p>
-          <p>Cult a way</p>
-          <p>Brand Guidelines</p>
-          <p>#legacyliveson</p>
-        </div>
-      </div>
+    <Footer/>
     </>
   )
 }

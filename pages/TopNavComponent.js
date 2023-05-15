@@ -4,8 +4,10 @@ import styles from '../styles/TopNavComponent.module.css';
 import hamburger from '../public/hamburger.svg';
 import Head from "next/head";
 import { useState } from "react";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
 export default function TopNavComponent({setOpened,setScroll}){
+    const router = useRouter();
     return(
         <>
         <Head>
@@ -16,10 +18,10 @@ export default function TopNavComponent({setOpened,setScroll}){
         <button className={styles.hamburger} onClick={()=>{setOpened(true);setScroll(false)}}>
             <span className="material-symbols-outlined">menu</span></button>
         <nav className={styles.navitems}>
-          <a href='#'>home</a>
-          <a href='#'>about</a>
-          <a href='#'>events</a>
-          <a href='#'>cult 11</a>
+          <div className={router.asPath=='/' ? 'item activeLink':'item'}><Link href={'/'}>home</Link></div>
+          <div className={router.asPath=='/about' ? 'item active':'item'}><Link href={'/about'}>about</Link></div>
+          <div className={router.asPath=='/events' ? 'item active':'item'}><Link href={'/events'}>events</Link></div>
+          <div className={router.asPath=='/cult11' ? 'item active':'item'}><Link href={'/cult11'}>cult11</Link></div>
         </nav>
       </header>
       </>

@@ -371,7 +371,7 @@ a {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  .flexMenu a{
+  .linkitem{
     font-size: 2rem;
     color: #DADCE0;
     border-radius: 25px;
@@ -381,7 +381,7 @@ a {
     padding: 10px;
     border: 1px solid white;
   }
-  .flexMenu a:active{
+  .linkitemactive{
     color: #202124;
     background-color: #DADCE0;
   }

@@ -1,0 +1,72 @@
+.chatflex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.userbox{
+    border-radius: 55px;
+    border: 1px solid #428EFF;
+    width: 100%;
+    margin-bottom: 30px;
+    padding:10px;
+
+}
+.aibox{
+    border-radius: 25px;
+    background-color: black;
+    height: auto;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    
+}
+.aibox p{
+    font-size: 20px;
+    padding-left: 5px;
+    text-align: left;
+}
+.aboutPicContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: scroll;
+    margin-top: 30px;
+}
+.aboutPicContainer img{
+    height: 200px;
+    width:200px;
+    border-radius: 25px;
+    margin-left: 20px;
+    object-fit: cover;
+
+}
+.legacy{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.legacy p{
+    margin-left: 1rem;
+}
+.verticalFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: -30px;
+    margin-bottom: -40px;
+}
+.circle{
+    height: 15px;
+    width:15px;
+    border-radius: 55%;
+    background-color: #428EFF;
+    margin-left: -6px;
+}
+.verticalLine{
+    border-left: 3px solid #428EFF;
+    height: 100px;
+}

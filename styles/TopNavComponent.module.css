@@ -24,6 +24,18 @@
     font-size: 18px;
     font-weight: 600;
 }
+.item{
+    margin-right: 30px;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: transparent;
+    color: #DADCE0;
+}
+.activeLink{
+    background-color: #DADCE0;
+    color: red;
+}
 .hamburger{
     display: none;
 }
