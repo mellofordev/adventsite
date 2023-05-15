@@ -3,7 +3,6 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css';
 import {motion} from 'framer-motion';
 import advent_logo_black from '../public/advent_logo_black.png';
-
 import wrap from '../public/wrap.svg';
 import { useEffect, useState } from 'react';
 import TopNavComponent from './TopNavComponent';
@@ -22,11 +21,11 @@ export default function Home() {
   const [isopened,setOpened]=useState(false);
   const [isscroll,setScroll] = useState(true);
   return (
-    <body style={{overflowX:'hidden'}}>
+    <>
     {isopened==true && 
         <MobileNav setOpened={setOpened} setScroll={setScroll}/>
     }
-    <div className={styles.container} >
+    <div className={styles.container} style={{overflowX:'hidden'}}>
 
       <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
       <div className={styles.main}>
@@ -101,6 +100,6 @@ export default function Home() {
       </div>
     </div>
     <Footer/>
-    </body>
+    </>
   )
 }

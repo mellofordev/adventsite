@@ -5,10 +5,9 @@
     align-items: center;
     border-radius: 25px;
     height: 60px;
-    width: 100%;
-    background-color: #4285f4;
+    width: 99%;
+    background-color: #ff5145;
     padding: 10px;
-    filter: drop-shadow(2px 4px 6px #4285f4);
     position: -webkit-sticky;
     position: sticky;
     top: 0;

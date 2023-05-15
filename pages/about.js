@@ -112,7 +112,9 @@ export default function About(){
                     }
                 </div>
              </div>
-             <Footer/>
+            {count==textItem.length && 
+            <Footer/>
+            }
         </>
     );
 }

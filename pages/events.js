@@ -6,7 +6,7 @@ import aboutstyles from '../styles/About.module.css';
 import styles from '../styles/Events.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';
-import advent_mech from '../public/advent/advent_mech.jpg';
+import adventtest from '../public/advent/advent_test.jpg';
 import advent_riding from '../public/advent/advent_riding.jpg';
 import advent_welding from '../public/advent/advent_welding.jpg';
 export default function Events(){
@@ -14,7 +14,7 @@ export default function Events(){
     const [isscroll,setScroll] = useState(true);
     const [selected,setSelect] = useState("workshop");
     const advent_pics = [
-        {id:1,pic:advent_mech.src},
+        {id:1,pic:adventtest.src},
         {id:2,pic:advent_riding.src},
         {id:3,pic:advent_welding.src}                    
     ];
@@ -45,8 +45,17 @@ export default function Events(){
                                 whileInView={{opacity:1,transform:'translate(0px)'}}
                                 transition={{ ease: "easeOut", duration: 0.8 }}
                                  >
-                                  <img src={i.pic}/>
-                                  <h2>{i.name}</h2>
+                                  <img src={i.pic} style={{height:'100%'}}/>
+                                  <h2>Workshop on name</h2>
+                                  <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
+                                    <div style={{display:'flex',flexDirection:'row'}}>
+                                        <span className="material-symbols-outlined" style={{fontSize:18,marginTop:20}} >currency_rupee</span>
+                                        <p>200</p>
+                                    </div>
+                                    <p>speaker name</p>
+                                    <p>May 30</p>
+                                  </div>
+                                  <button className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>Register</button>
                                 </motion.div>
                             );
                         })}
