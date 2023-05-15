@@ -45,7 +45,7 @@ export default function About(){
                 get_text.innerHTML+=textItem.charAt(index);
                 index++;
                 setCount(index);
-                setTimeout(typewriter,50);
+                setTimeout(typewriter,20);
             }   
         }
         if(loading==true){
@@ -61,9 +61,9 @@ export default function About(){
                 
                 <div className={homestyles.container}>
                     <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
-                    <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' style={{width:'100%'}}>
+                    {/* <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' style={{width:'100%'}}>
                         <h1>About</h1>
-                    </motion.div>
+                    </motion.div> */}
                     <div className={styles.chatflex}>
                         <div className={styles.userbox}>
                             <h3>prompt : what is advent</h3>
@@ -112,7 +112,7 @@ export default function About(){
                     }
                 </div>
              </div>
-            <Footer/>
+             <Footer/>
         </>
     );
 }
