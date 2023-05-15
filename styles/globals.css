@@ -6,9 +6,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #1f1f1f;
   color: white;
-  overflow-x: hidden;
   user-select: none;
   -webkit-user-select: none;
+
 }
 @font-face {
   font-family: 'retrolight';
@@ -295,6 +295,7 @@ a {
     border-radius: 25px;
     margin-bottom: 30px;
     border: 1px solid white;
+    width: 120%;
   }
   .overviewBoxContainer:hover{
     color: #202124;
@@ -302,7 +303,7 @@ a {
     border: 1px solid #428EFF;
   }
   .overviewBoxContainer img{
-    width: 350px;
+    width: 100%;
   }
   .mobileView{
     display: flex;

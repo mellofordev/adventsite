@@ -22,7 +22,7 @@ export default function Home() {
   const [isopened,setOpened]=useState(false);
   const [isscroll,setScroll] = useState(true);
   return (
-    <>
+    <body style={{overflowX:'hidden'}}>
     {isopened==true && 
         <MobileNav setOpened={setOpened} setScroll={setScroll}/>
     }
@@ -77,7 +77,7 @@ export default function Home() {
           <motion.div initial={{transform:'translateY(-100px)',opacity:0}} whileInView={{transform:'translateY(0px)',opacity:1}} transition={{duration:2}} className='circlePattern'></motion.div>
           <motion.div initial={{transform:'translateX(100px)',opacity:0}} whileInView={{transform:'translateX(0px)',opacity:1}} transition={{duration:2}} className='recPattern'></motion.div>
         </div>
-        <div className='aboutContainer' style={{backgroundColor:'transparent',marginTop:50,borderRadius:20}}>
+        <div className='aboutContainer' style={{backgroundColor:'transparent',marginTop:'40%',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
             <h1 style={{color:'white'}}>Campus Ambassador</h1>
             <button className='buttonMain' style={{color:'black',borderColor:'#428EFF',backgroundColor:'#428EFF'}}>Apply now</button>
@@ -101,6 +101,6 @@ export default function Home() {
       </div>
     </div>
     <Footer/>
-    </>
+    </body>
   )
 }

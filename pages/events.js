@@ -3,6 +3,7 @@ import {  useState } from 'react';
 import MobileNav from "./MobileNav";
 import homestyles from '../styles/Home.module.css';
 import aboutstyles from '../styles/About.module.css';
+import styles from '../styles/Events.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';
 import advent_mech from '../public/advent/advent_mech.jpg';
@@ -11,11 +12,13 @@ import advent_welding from '../public/advent/advent_welding.jpg';
 export default function Events(){
     const [isopened,setOpened]=useState(false);
     const [isscroll,setScroll] = useState(true);
+    const [selected,setSelect] = useState("workshop");
     const advent_pics = [
         {id:1,pic:advent_mech.src},
         {id:2,pic:advent_riding.src},
         {id:3,pic:advent_welding.src}                    
-    ]
+    ];
+    const activestyle = {backgroundColor:'white',color:'#202124'};
     return(
         <>
             {isopened==true && 
@@ -28,16 +31,23 @@ export default function Events(){
                     <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' style={{width:'100%'}}>
                         <h1>Events</h1>
                     </motion.div>
-                    <div className={aboutstyles.aboutPicContainer}>
+                    <div className={styles.eventNav}>
+                        <button style={selected=='workshop' ? activestyle :{} } onClick={()=>setSelect("workshop")}>workshops</button>
+                        <button style={selected=='events' ? activestyle :{} } onClick={()=>setSelect("events")}>events</button>
+                        <button style={selected=='proshow' ? activestyle :{} } onClick={()=>setSelect("proshow")}>proshow</button>
+                    </div>
+                    <div className='overviewContainer'>
                         {
                         advent_pics.map((i)=>{
                             return(
-                                <motion.img 
-                                    initial={{opacity:0}} whileInView={{opacity:1}} 
-                                    transition={{ease:'easeIn',duration:1}}
-                                    key={i.id} src={i.pic} 
-                                
-                                />
+                                <motion.div key={i.id} className='overviewBoxContainer'
+                                initial={{opacity:0,transform:'translate(-100px)'}}
+                                whileInView={{opacity:1,transform:'translate(0px)'}}
+                                transition={{ ease: "easeOut", duration: 0.8 }}
+                                 >
+                                  <img src={i.pic}/>
+                                  <h2>{i.name}</h2>
+                                </motion.div>
                             );
                         })}
                     </div>
