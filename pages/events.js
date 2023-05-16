@@ -23,7 +23,7 @@ export default function Events(){
     const activestyle = {backgroundColor:'white',color:'#202124'};
     const apifetch = () =>{
         setLoading(true);
-        fetch(`http://adventapi.pythonanywhere.com/api/events/${selected}`,{
+        fetch(`https://adventapi.pythonanywhere.com/api/events/${selected}`,{
             method:'GET',
             headers:{
                 'Content-type':'application/json'
