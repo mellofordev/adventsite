@@ -1,5 +1,5 @@
 import TopNavComponent from "./TopNavComponent";
-import {  useState } from 'react';
+import {  useEffect, useState } from 'react';
 import MobileNav from "./MobileNav";
 import homestyles from '../styles/Home.module.css';
 import aboutstyles from '../styles/About.module.css';
@@ -13,12 +13,31 @@ export default function Events(){
     const [isopened,setOpened]=useState(false);
     const [isscroll,setScroll] = useState(true);
     const [selected,setSelect] = useState("workshop");
+    const [data,setData] = useState([]);
+    const [loading,setLoading] = useState(true);
     const advent_pics = [
         {id:1,pic:adventtest.src},
         {id:2,pic:advent_riding.src},
         {id:3,pic:advent_welding.src}                    
     ];
     const activestyle = {backgroundColor:'white',color:'#202124'};
+    const apifetch = () =>{
+        setLoading(true);
+        fetch(`http://adventapi.pythonanywhere.com/api/events/${selected}`,{
+            method:'GET',
+            headers:{
+                'Content-type':'application/json'
+            }
+        })
+        .then(response=>response.json())
+        .then(data=>{
+            setData(data.data);
+            setLoading(false);
+        })
+    }
+    useEffect(()=>{
+        apifetch();
+    },[selected])
     return(
         <>
             {isopened==true && 
@@ -32,37 +51,42 @@ export default function Events(){
                         <h1>Events</h1>
                     </motion.div>
                     <div className={styles.eventNav}>
-                        <button style={selected=='workshop' ? activestyle :{} } onClick={()=>setSelect("workshop")}>workshops</button>
+                        <button style={selected=='workshop' ? activestyle :{} } onClick={()=>{setSelect("workshop")}}>workshops</button>
                         <button style={selected=='events' ? activestyle :{} } onClick={()=>setSelect("events")}>events</button>
                         <button style={selected=='proshow' ? activestyle :{} } onClick={()=>setSelect("proshow")}>proshow</button>
                     </div>
                     <div className='overviewContainer'>
                         {
-                        advent_pics.map((i)=>{
+                        loading==true ? <h1>loading...</h1>
+                        :(
+                        data.length==0 ? <h1>{selected} coming soon</h1> :(
+                        data.map((i)=>{
                             return(
                                 <motion.div key={i.id} className='overviewBoxContainer'
                                 initial={{opacity:0,transform:'translate(-100px)'}}
                                 whileInView={{opacity:1,transform:'translate(0px)'}}
                                 transition={{ ease: "easeOut", duration: 0.8 }}
                                  >
-                                  <img src={i.pic} style={{height:'100%'}}/>
-                                  <h2>Workshop on name</h2>
+                                  <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
+                                  <h2>{i.event_name}</h2>
                                   <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
                                     <div style={{display:'flex',flexDirection:'row'}}>
                                         <span className="material-symbols-outlined" style={{fontSize:18,marginTop:20}} >currency_rupee</span>
-                                        <p>200</p>
+                                        <p>{i.event_prize}</p>
                                     </div>
-                                    <p>speaker name</p>
+                                    <p>{i.speaker_name}</p>
                                     <p>May 30</p>
                                   </div>
                                   <button className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>Register</button>
                                 </motion.div>
                             );
-                        })}
+                        })))}
                     </div>
                 </div>
              </div>
-            <Footer/>
+             {loading==false && 
+             <Footer/>
+             }
         </>
     );
 }
