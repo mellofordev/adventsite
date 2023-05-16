@@ -14,10 +14,9 @@ export default function About(){
     const [loading,setLoading] = useState(true);
     const [count,setCount] = useState(0);
     const textItem = `
-    Advent is the annual technical festival of Sree Chitra Thirunal College of Engineering (SCTCE), Thiruvananthapuram, Kerala, India. It is a 3-day event that showcases the technical skills and talent of students from all over the country. The fest features a wide range of events, including competitions, workshops, and exhibitions. Advent is a great opportunity for students to learn, network, and have fun.
+    Advent is the annual technical festival of SCT College of Engineering (SCTCE), Thiruvananthapuram, Kerala, India. It is a 3-day event that showcases the technical skills and talent of students from all over the country. The fest features a wide range of events, including competitions, workshops, and exhibitions. Advent is a great opportunity for students to learn, network, and have fun.
     
-    The first Advent was held in 2007. The fest has grown in size and scope over the years, and it is now one of the most popular technical festivals in Kerala. In 2022, Advent had over 10,000 participants from over 100 colleges across India.
-    
+    The first Advent was held in 2007. The fest has grown in size and scope over the years, and it is now one of the most popular technical festivals in Kerala
     The main events of Advent include:
     
     TechQuiz: A quiz competition for students from all over the country.
@@ -28,8 +27,6 @@ export default function About(){
     Workshops: A variety of workshops on technical topics.
     Exhibitions: A variety of exhibitions on technical topics.
     Advent is a great opportunity for students to learn, network, and have fun. It is a must-attend event for any student interested in technology.
-    
-    Here are some links to the official website and social media pages of Advent:
     `;
     const advent_pics = [
         {id:1,pic:advent_mech.src},

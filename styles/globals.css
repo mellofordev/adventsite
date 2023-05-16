@@ -404,7 +404,7 @@ a {
     }
   }
   .animatebox{
-    animation: animbox 0.9s linear;
+    animation: animbox 0.3s linear;
   }
   .animateboxback{
     animation: animboxback 0.9s linear;

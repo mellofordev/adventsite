@@ -10,6 +10,10 @@ export default function TopNavComponent({setOpened,setScroll}){
     return(
         <>
         <Head>
+            <meta name='theme-color' color='#1f1f1f'/>
+            <meta name='description' content='Advent, sctce college and tech fest,cultaway advent, advent, SCTCE, Sree Chitra Thirunal College of Engineering, Cult A Way, Cult A Way 2023,'/>
+            <title>Advent '23</title>
+            <link rel="icon" type="image/png" href="advent_logo/advent_color_plain.png"></link>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         </Head>
         <header className={styles.header}>

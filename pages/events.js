@@ -62,22 +62,21 @@ export default function Events(){
                         data.length==0 ? <h1>{selected} coming soon</h1> :(
                         data.map((i)=>{
                             return(
-                                <motion.div key={i.id} className='overviewBoxContainer'
+                                <motion.div  key={i.id} className='overviewBoxContainer'
                                 initial={{opacity:0,transform:'translate(-100px)'}}
                                 whileInView={{opacity:1,transform:'translate(0px)'}}
                                 transition={{ ease: "easeOut", duration: 0.8 }}
+                                onClick={()=>{window.open(i.event_redirect_link)}}
                                  >
                                   <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
                                   <h2>{i.event_name}</h2>
-                                  <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
-                                    <div style={{display:'flex',flexDirection:'row'}}>
-                                        <span className="material-symbols-outlined" style={{fontSize:18,marginTop:20}} >currency_rupee</span>
-                                        <p>{i.event_prize}</p>
-                                    </div>
-                                    <p>{i.speaker_name}</p>
-                                    <p>May 30</p>
+                                  <p style={{color:'#DADCE0'}}>{i.event_dis}</p>
+                                  <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
+                                    <p style={{marginRight:30}}>{i.event_type}</p>
+                                    <p>speaker: {i.speaker_name}</p>
+                                    
                                   </div>
-                                  <button onClick={()=>{window.open(i.event_redirect_link)}} className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>Register</button>
+                                  <button className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
                                 </motion.div>
                             );
                         })))}

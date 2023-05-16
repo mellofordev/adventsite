@@ -11,9 +11,9 @@ import MobileNav from './MobileNav';
 import Footer from './Footer';
 import {useRouter} from 'next/navigation';
 export default function Home() {
-  const overview_data = [{id:1,name:'Tech expo',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
-                         {id:2,name:'Proshow',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
-                         {id:3,name:'Workshops',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'}
+  const overview_data = [{id:1,name:'Tech expo',pic:'https://i.ibb.co/Lg6KNy8/advent-tech-expo.jpg'},
+                         {id:2,name:'Culturals',pic:'https://i.ibb.co/C26kk9L/culturalsog.jpg'},
+                         {id:3,name:'Workshops',pic:'https://i.ibb.co/Bs28gm9/workshop.jpg'}
                         ];
   const sponsors = [{id:1,pic:'https://i.pinimg.com/originals/a7/23/b9/a723b9d7887212078aaa89e3697b217a.png'},
                         {id:2,pic:'https://cdn.shopify.com/s/files/1/0067/0374/3040/files/white_240x240.png?v=1648004714'},
