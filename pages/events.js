@@ -77,7 +77,7 @@ export default function Events(){
                                     <p>{i.speaker_name}</p>
                                     <p>May 30</p>
                                   </div>
-                                  <button className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>Register</button>
+                                  <button onClick={()=>{window.open(i.event_redirect_link)}} className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>Register</button>
                                 </motion.div>
                             );
                         })))}
