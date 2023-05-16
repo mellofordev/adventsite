@@ -1,7 +1,6 @@
 import Image from "next/image";
-import advent_logo from '../public/advent_color_logo_bg.png';
+import advent_logo from '../public/advent_logo/advent_color_black.png';
 import styles from '../styles/TopNavComponent.module.css';
-import hamburger from '../public/hamburger.svg';
 import Head from "next/head";
 import { useState } from "react";
 import Link from "next/link";
