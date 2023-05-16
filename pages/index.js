@@ -9,6 +9,7 @@ import TopNavComponent from './TopNavComponent';
 import TimeCounter from './TimeCounter';
 import MobileNav from './MobileNav';
 import Footer from './Footer';
+import {useRouter} from 'next/navigation';
 export default function Home() {
   const overview_data = [{id:1,name:'Tech expo',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
                          {id:2,name:'Proshow',pic:'https://io.google/2023/data/im/9fe491dd-cadc-4e03-b084-f75e695993ea.webp'},
@@ -20,6 +21,7 @@ export default function Home() {
                        ];
   const [isopened,setOpened]=useState(false);
   const [isscroll,setScroll] = useState(true);
+  const router = useRouter();
   return (
     <>
     {isopened==true && 
@@ -45,11 +47,11 @@ export default function Home() {
         </div>
         <div className='firstViewer'>
           <img src='https://io.google/2023/app/images/keynote.webp'/>
-          <h2>Come and experience Engineering playground</h2>
-          <button className='firstViewerButton'>explore events</button>
+          <h2>Come and experience Engineering playaza</h2>
+          <button className='firstViewerButton' onClick={()=>router.push('/events')}>explore events</button>
         </div>
         <div className='overviewContainer'>
-          <h1>Dive into the future</h1>
+          <h1>What we got for you?</h1>
           {overview_data.map((i)=>{
             return(
               <motion.div key={i.id} className='overviewBoxContainer'
@@ -68,9 +70,9 @@ export default function Home() {
         :'easeIn',duration:2}} className='aboutContainer'>
           <div className='aboutTextContainer'>
             <h1>Advent is the annual tech fest brought to you by Cult a way </h1>
-            <button className='buttonMain'>See the legacy</button>
+            <button className='buttonMain' onClick={()=>router.push('/about')}>See the legacy</button>
           </div>
-          <Image src={advent_logo_black} className='aboutImage'/>
+          <Image src={advent_logo_black} className='aboutImage' alt='about image'/>
         </motion.div>
         <div className='patternflex'>
           <motion.div initial={{transform:'translateY(-100px)',opacity:0}} whileInView={{transform:'translateY(0px)',opacity:1}} transition={{duration:2}} className='circlePattern'></motion.div>

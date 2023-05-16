@@ -13,7 +13,7 @@ export default function TopNavComponent({setOpened,setScroll}){
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         </Head>
         <header className={styles.header}>
-        <Image src={advent_logo} className={styles.headerImg}/>
+        <Image src={advent_logo} className={styles.headerImg} alt="Advent logo"/>
         <button className={styles.hamburger} onClick={()=>{setOpened(true);setScroll(false)}}>
             <span className="material-symbols-outlined">menu</span></button>
         <nav className={styles.navitems}>

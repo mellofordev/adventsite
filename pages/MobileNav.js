@@ -11,7 +11,7 @@ export default function MobileNav({setOpened,setScroll}){
         <div className={'animatebox'} style={{height:'100vh',zIndex:100}}>
                 <div className={homestyles.container}>
                   <div className={tabstyles.header}>
-                  <Image src={advent_logo} className={tabstyles.headerImg}/>
+                  <Image src={advent_logo} className={tabstyles.headerImg} alt='Advent logo'/>
                     <button className={tabstyles.hamburger} onClick={()=>{setOpened(false);setScroll(true)}}>
                     <span className="material-symbols-outlined">close</span></button>
                   </div>
