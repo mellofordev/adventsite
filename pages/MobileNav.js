@@ -17,10 +17,10 @@ export default function MobileNav({setOpened,setScroll}){
                   </div>
                 </div>
                 <div className='flexMenu'>
-                  <Link href={'/'} className={router.asPath=='/' ? 'linkitem linkitemactive':'linkitem'}>home</Link>
-                  <Link href={'/about'} className={router.asPath=='/about' ? 'linkitem linkitemactive':'linkitem'}>about</Link>
-                  <Link href={'/events'} className={router.asPath=='/events' ? 'linkitem linkitemactive':'linkitem'}>events</Link>
-                  <Link target={'_blank'} href={'https://www.cultaway.in'} className={router.asPath=='/cult11' ? 'linkitem linkitemactive':'linkitem'}>cult11</Link>
+                  <Link href={'/'} className={router.asPath=='/' ? 'linkitem linkitemactive':'linkitem'}>Home</Link>
+                  <Link href={'/about'} className={router.asPath=='/about' ? 'linkitem linkitemactive':'linkitem'}>About</Link>
+                  <Link href={'/events'} className={router.asPath=='/events' ? 'linkitem linkitemactive':'linkitem'}>Events</Link>
+                  <Link target={'_blank'} href={'https://www.cultaway.in'} className={router.asPath=='/cult11' ? 'linkitem linkitemactive':'linkitem'}>Cult11</Link>
                 </div>
         </div>
     );

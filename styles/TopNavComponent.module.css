@@ -41,7 +41,9 @@
 }
 @media (max-width:600px) {
     .headerImg{
-        margin: 0px;
+        height: 60px;
+        width: 60px;
+        margin-top: 10px;
     }
     .navitems{
         display: none;

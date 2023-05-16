@@ -11,9 +11,9 @@ import MobileNav from './MobileNav';
 import Footer from './Footer';
 import {useRouter} from 'next/navigation';
 export default function Home() {
-  const overview_data = [{id:1,name:'Tech expo',pic:'https://i.ibb.co/Lg6KNy8/advent-tech-expo.jpg'},
-                         {id:2,name:'Culturals',pic:'https://i.ibb.co/C26kk9L/culturalsog.jpg'},
-                         {id:3,name:'Workshops',pic:'https://i.ibb.co/Bs28gm9/workshop.jpg'}
+  const overview_data = [{id:1,name:'Tech expo',pic:'https://i.ibb.co/1bB41SL/cart.jpg'},
+                         {id:2,name:'Culturals',pic:'https://i.ibb.co/DtWNp2b/cultural2.jpg'},
+                         {id:3,name:'Workshops',pic:'https://i.ibb.co/RyM1RsR/tech.jpg'}
                         ];
   const sponsors = [{id:1,pic:'https://i.pinimg.com/originals/a7/23/b9/a723b9d7887212078aaa89e3697b217a.png'},
                         {id:2,pic:'https://cdn.shopify.com/s/files/1/0067/0374/3040/files/white_240x240.png?v=1648004714'},
@@ -34,11 +34,15 @@ export default function Home() {
         <div className='flexContainer'>
           <TimeCounter/>
           <div className='rightSide'>
-            <div className='rightSideIntro'>
+            <motion.div className='rightSideIntro'
+            initial={{opacity:0,}}
+            whileInView={{opacity:1}}
+            transition={{ ease:'easeInOut', duration: 0.8 }}
+            >
               <h1>Let's go It's Advent May 30,2023</h1>
-            </div>
+            </motion.div>
             <div className='mobileView'>
-              <motion.img initial={{opacity:0,marginRight:-205}} whileInView={{opacity:1,marginRight:137}} transition={{duration:3}} src={wrap.src} style={{marginLeft:0}}/>
+              <motion.img initial={{opacity:0,marginRight:-205}} whileInView={{opacity:1,marginRight:137}} transition={{duration:5}} src={wrap.src} style={{marginLeft:0}}/>
             </div>
             <div className='rightSideVid'>
               <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/kRQZ803JrbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
@@ -59,7 +63,7 @@ export default function Home() {
               whileInView={{opacity:1,transform:'translate(0px)'}}
               transition={{ ease: "easeOut", duration: 0.8 }}
                >
-                <img src={i.pic}/>
+                <img src={i.pic} />
                 <h2>{i.name}</h2>
               </motion.div>
             );
