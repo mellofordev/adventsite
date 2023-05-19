@@ -297,9 +297,7 @@ a {
     width: 120%;
   }
   .overviewBoxContainer:hover{
-    color: #202124;
-    background-color: #428EFF;
-    border: 1px solid #428EFF;
+    border: 1px solid #a355ff;
   }
   .overviewBoxContainer img{
     width: 100%;
