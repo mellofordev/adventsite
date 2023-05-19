@@ -9,6 +9,7 @@ import {motion} from 'framer-motion';
 import adventtest from '../public/advent/advent_test.jpg';
 import advent_riding from '../public/advent/advent_riding.jpg';
 import advent_welding from '../public/advent/advent_welding.jpg';
+
 export default function Events(){
     const [isopened,setOpened]=useState(false);
     const [isscroll,setScroll] = useState(true);
@@ -62,22 +63,22 @@ export default function Events(){
                         data.length==0 ? <h1>{selected} coming soon</h1> :(
                         data.map((i)=>{
                             return(
-                                <motion.div  key={i.id} className='overviewBoxContainer'
-                                initial={{opacity:0,transform:'translate(-100px)'}}
-                                whileInView={{opacity:1,transform:'translate(0px)'}}
-                                transition={{ ease: "easeOut", duration: 0.8 }}
-                                onClick={()=>{window.open(i.event_redirect_link)}}
-                                 >
-                                  <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
-                                  <h2>{i.event_name}</h2>
-                                  <p style={{color:'#DADCE0'}}>{i.event_dis}</p>
-                                  <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
-                                    <p style={{marginRight:30}}>{i.event_type}</p>
-                                    <p>speaker: {i.speaker_name}</p>
-                                    
-                                  </div>
-                                  <button className="buttonMain" style={{color:'white',backgroundColor:'#428EFF',}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
-                                </motion.div>
+                        <motion.div  key={i.id} className='overviewBoxContainer'
+                            initial={{opacity:0,transform:'translate(-100px)'}}
+                            whileInView={{opacity:1,transform:'translate(0px)'}}
+                            transition={{ ease: "easeOut", duration: 0.8 }}
+                            onClick={()=>{window.open(i.event_redirect_link)}}
+                             >
+                              <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
+                              <h2>{i.event_name}</h2>
+                              <p style={{color:'#DADCE0'}}>{i.event_dis}</p>
+                              <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
+                                <p style={{marginRight:30}}>{i.event_type}</p>
+                                <p>speaker: {i.speaker_name}</p>
+                                
+                              </div>
+                              <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
+                        </motion.div>
                             );
                         })))}
                     </div>
