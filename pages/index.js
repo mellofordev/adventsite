@@ -85,7 +85,7 @@ export default function Home() {
         <div className='aboutContainer' style={{backgroundColor:'transparent',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
             <img src='https://adventapi.pythonanywhere.com/media/eventpics/caposter.jpeg' style={{height:'auto',width:'100%'}}/>
-            <button className='buttonMain' style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
+            <button className='buttonMain' onClick={()=>{window.open('https://docs.google.com/forms/d/e/1FAIpQLSevuJ7wR2xlvs6dJ3JRoRvsdPNY4idsCq-lWc6IK5VFBQbClw/viewform')}} style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
           </div>
         </div>
         <div className='overviewContainer'>
