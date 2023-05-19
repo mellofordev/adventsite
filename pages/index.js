@@ -82,10 +82,10 @@ export default function Home() {
           <motion.div initial={{transform:'translateY(-100px)',opacity:0}} whileInView={{transform:'translateY(0px)',opacity:1}} transition={{duration:2}} className='circlePattern'></motion.div>
           <motion.div initial={{transform:'translateX(100px)',opacity:0}} whileInView={{transform:'translateX(0px)',opacity:1}} transition={{duration:2}} className='recPattern'></motion.div>
         </div>
-        <div className='aboutContainer' style={{backgroundColor:'transparent',marginTop:'40%',borderRadius:20}}>
+        <div className='aboutContainer' style={{backgroundColor:'transparent',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
-            <h1 style={{color:'white'}}>Campus Ambassador</h1>
-            <button className='buttonMain' style={{color:'black',borderColor:'#428EFF',backgroundColor:'#428EFF'}}>Apply now</button>
+            <img src='https://adventapi.pythonanywhere.com/media/eventpics/caposter.jpeg' style={{height:'auto',width:'100%'}}/>
+            <button className='buttonMain' style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
           </div>
         </div>
         <div className='overviewContainer'>
