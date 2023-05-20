@@ -84,14 +84,18 @@ export default function Home() {
           <div className='aboutTextContainer'>
             <h1>Advent is the annual tech fest brought to you by Cult a way </h1>
             <button className='buttonMain' onClick={()=>router.push('/about')}>See the legacy</button>
-            <Image src={advent_logo_black} className='aboutImage' alt='about image'/>
+            <motion.img src={advent_logo_black.src} className='aboutImage' alt='about image'
+                                       initial={{opacity:0,transform:'scale(0.3)'}}
+                                       whileInView={{opacity:1,transform:'scale(1)'}}
+                                       transition={{ ease:'easeIn', duration: 0.5 }}
+            />
           </div>
         </motion.div>
         {/* <div className='patternflex'>
           <motion.div initial={{transform:'translateY(-100px)',opacity:0}} whileInView={{transform:'translateY(0px)',opacity:1}} transition={{duration:2}} className='circlePattern'></motion.div>
           <motion.div initial={{transform:'translateX(100px)',opacity:0}} whileInView={{transform:'translateX(0px)',opacity:1}} transition={{duration:2}} className='recPattern'></motion.div>
         </div> */}
-        <div className='aboutContainer' style={{backgroundColor:'transparent',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
+        <div className='aboutContainer' style={{backgroundColor:'transparent',backgroundImage:'none',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
             <img src='https://adventapi.pythonanywhere.com/media/eventpics/caposter.jpeg' style={{height:'auto',width:'100%'}}/>
             <button className='buttonMain' onClick={()=>{window.open('https://docs.google.com/forms/d/e/1FAIpQLSevuJ7wR2xlvs6dJ3JRoRvsdPNY4idsCq-lWc6IK5VFBQbClw/viewform')}} style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
