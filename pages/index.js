@@ -1,10 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css';
 import {motion} from 'framer-motion';
 import advent_logo_black from '../public/advent_logo/adventog.png';
-import wrap from '../public/wrap.svg';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import TopNavComponent from './TopNavComponent';
 import TimeCounter from './TimeCounter';
 import MobileNav from './MobileNav';

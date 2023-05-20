@@ -2,7 +2,6 @@ import TopNavComponent from "./TopNavComponent";
 import {  useEffect, useState } from 'react';
 import MobileNav from "./MobileNav";
 import homestyles from '../styles/Home.module.css';
-import aboutstyles from '../styles/About.module.css';
 import styles from '../styles/Events.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';

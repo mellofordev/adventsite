@@ -1,5 +1,5 @@
 import TopNavComponent from "./TopNavComponent";
-import { useDeferredValue, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import MobileNav from "./MobileNav";
 import homestyles from '../styles/Home.module.css';
 import styles from '../styles/About.module.css';
