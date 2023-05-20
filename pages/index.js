@@ -35,8 +35,8 @@ export default function Home() {
           <TimeCounter/>
           <div className='rightSide'>
             <motion.div className='rightSideIntro'
-            initial={{opacity:0,}}
-            whileInView={{opacity:1}}
+            initial={{opacity:0,transform:'scale(0.7)'}}
+            whileInView={{opacity:1,transform:'scale(1)'}}
             transition={{ ease:'easeInOut', duration: 0.8 }}
             >
               <h1>Let's go It's Advent May 30,2023</h1>
