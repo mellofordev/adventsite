@@ -46,7 +46,7 @@ export default function Events(){
                     </motion.div>
                     <div className={styles.eventNav}>
                         <button style={selected=='workshop' ? activestyle :{} } onClick={()=>{setSelect("workshop")}}>workshops</button>
-                        <button style={selected=='events' ? activestyle :{} } onClick={()=>setSelect("events")}>events</button>
+                        <button style={selected=='events' ? activestyle :{} } onClick={()=>setSelect("event")}>events</button>
                         <button style={selected=='proshow' ? activestyle :{} } onClick={()=>setSelect("proshow")}>proshow</button>
                     </div>
                     <div className='overviewContainer'>
