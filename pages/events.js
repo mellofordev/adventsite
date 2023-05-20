@@ -5,9 +5,6 @@ import homestyles from '../styles/Home.module.css';
 import styles from '../styles/Events.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';
-import adventtest from '../public/advent/advent_test.jpg';
-import advent_riding from '../public/advent/advent_riding.jpg';
-import advent_welding from '../public/advent/advent_welding.jpg';
 
 export default function Events(){
     const [isopened,setOpened]=useState(false);
@@ -15,11 +12,7 @@ export default function Events(){
     const [selected,setSelect] = useState("workshop");
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
-    const advent_pics = [
-        {id:1,pic:adventtest.src},
-        {id:2,pic:advent_riding.src},
-        {id:3,pic:advent_welding.src}                    
-    ];
+
     const activestyle = {backgroundColor:'white',color:'#202124'};
     const apifetch = () =>{
         setLoading(true);
