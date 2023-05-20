@@ -1,9 +1,1 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="24" fill="white" fill-opacity="0.01"></rect>
-        <path id="hamburger-path" fill-rule="evenodd" clip-rule="evenodd" d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="white" ></path>
-        <mask id="mask0_3949_5619" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="18" height="12">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="white"></path>
-        </mask>
-        <g mask="url(#mask0_3949_5619)">
-        </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="14" viewBox="0 0 42 14" fill="none"><g opacity=".7"><rect opacity=".7" y=".5" width="42" height="1" fill="#e8e8e8"/><rect opacity=".8" y="6.5" width="42" height="1" fill="#e8e8e8"/><rect opacity=".9" y="12.5" width="42" height="1" fill="#e8e8e8"/></g></svg>

@@ -89,10 +89,6 @@ export default function Home() {
             />
           </div>
         </motion.div>
-        {/* <div className='patternflex'>
-          <motion.div initial={{transform:'translateY(-100px)',opacity:0}} whileInView={{transform:'translateY(0px)',opacity:1}} transition={{duration:2}} className='circlePattern'></motion.div>
-          <motion.div initial={{transform:'translateX(100px)',opacity:0}} whileInView={{transform:'translateX(0px)',opacity:1}} transition={{duration:2}} className='recPattern'></motion.div>
-        </div> */}
         <div className='aboutContainer' style={{backgroundColor:'transparent',backgroundImage:'none',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
             <img src='https://adventapi.pythonanywhere.com/media/eventpics/caposter.jpeg' style={{height:'auto',width:'100%'}}/>

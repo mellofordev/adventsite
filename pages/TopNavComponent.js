@@ -5,6 +5,8 @@ import Head from "next/head";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import hamburger from '../public/hamburger.svg';
+
 export default function TopNavComponent({setOpened,setScroll}){
     const router = useRouter();
     return(
@@ -19,7 +21,7 @@ export default function TopNavComponent({setOpened,setScroll}){
         <header className={styles.header}>
         <Image src={advent_logo} className={styles.headerImg} alt="Advent logo"/>
         <button className={styles.hamburger} onClick={()=>{setOpened(true);setScroll(false)}}>
-            <img src="https://www.tathva.org/svgs/nav-menu-icon.svg"/>
+            <img src={hamburger.src}/>
         </button>
         <nav className={styles.navitems}>
           <div className={router.asPath=='/' ? 'item activeLink':'item'}><Link href={'/'}>home</Link></div>
