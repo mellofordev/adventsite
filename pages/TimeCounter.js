@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 
 export default function TimeCounter(){
-    const counter = new Date("May 30,2023 09:30:00").getTime();
+    const counter = new Date("May 30,2023 9:30:00").getTime();
     const [day,setDay] = useState(0);
     const [hour,setHour] = useState(0);
     const [minute,setMinute] = useState(0);

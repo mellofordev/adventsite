@@ -1,5 +1,5 @@
 import Image from "next/image";
-import advent_logo from '../public/advent_logo/advent_color_black.png';
+import advent_logo from '../public/advent_logo/adventog.png';
 import styles from '../styles/TopNavComponent.module.css';
 import Head from "next/head";
 import { useState } from "react";
@@ -19,7 +19,8 @@ export default function TopNavComponent({setOpened,setScroll}){
         <header className={styles.header}>
         <Image src={advent_logo} className={styles.headerImg} alt="Advent logo"/>
         <button className={styles.hamburger} onClick={()=>{setOpened(true);setScroll(false)}}>
-            <span className="material-symbols-outlined">menu</span></button>
+            <img src="https://www.tathva.org/svgs/nav-menu-icon.svg"/>
+        </button>
         <nav className={styles.navitems}>
           <div className={router.asPath=='/' ? 'item activeLink':'item'}><Link href={'/'}>home</Link></div>
           <div className={router.asPath=='/about' ? 'item active':'item'}><Link href={'/about'}>about</Link></div>

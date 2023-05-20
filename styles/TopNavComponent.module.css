@@ -8,7 +8,7 @@
 .headerImg{
     height:70px;
     width:70px;
-    margin:10
+    margin-top:10px;
 }
 .navitems{
     display: flex;
@@ -41,9 +41,10 @@
 }
 @media (max-width:600px) {
     .headerImg{
-        height: 60px;
-        width: 60px;
+        height:85px;
+        width: 85px;
         margin-top: 10px;
+        object-fit: cover;
     }
     .navitems{
         display: none;
@@ -52,7 +53,7 @@
         display: block;
         height:70px;
         width:70px;
-        margin:10px;
+        margin-top:25px;
         background-color: transparent;
         border: none;
         color: white;

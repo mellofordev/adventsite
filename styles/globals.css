@@ -23,32 +23,32 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  clip-path: polygon(12px 0px, 100% 0px, 100% 72%, calc(100% - 12px) 100%, 0px 100%, 0px 12px);
 }
 .firstViewer img{
   position: relative;
   height: 400px;
   width: 100%;
-  border-radius: 55px;
   filter: brightness(0.6);
   object-fit: cover;
+  
 }
 .firstViewer h2{
   position: absolute;
   font-size: 40px;
   line-height: 30px;
-
 }
 .firstViewerButton{
   position: absolute;
   margin-top: 130px;
   height: 50px;
   width: 300px;
-  border-radius: 10px;
   background-color: #428EFF;
   border: 0px;
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #202124;
+  clip-path: polygon(12px 0px, 100% 0px, 100% 72%, calc(100% - 12px) 100%, 0px 100%, 0px 12px);
 }
 .firstViewerButton:hover{
   color: white;
@@ -73,10 +73,11 @@ a {
   color: #202124;
 }
 .aboutImage{
-  height: 200px;
-  width: 200px;
+  height: 500px;
+  width: 500px;
   border-radius: 25px;
   margin: 30px;
+  object-fit: cover;
 }
 .buttonMain{
   height: 50px;
@@ -134,15 +135,15 @@ a {
   margin-top: -55px;
 }
 .boxTimer{
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 25px;
+  background-color: #202124;
+  border-radius: 0px;
   height: auto;
   width: 500px;
   text-align:center;
   margin: 10px;
   font-size: 70px;
   padding: 10px;
+  clip-path:  polygon(28px 0px, 100% 0px, 100% 72%, calc(100% - 0px) 100%, 0px 100%, 0px 20px);
 }
 .boxTimer h1{
   font-family: 'retrolight';
@@ -180,8 +181,11 @@ a {
 @media(max-width:600px){
 
   .flexContainer{
+    margin-top: -50px;
     flex-direction: column;
     height: 100vh;
+    background-size: 60px 80px;
+    background-image: linear-gradient(90deg,hsla(0,0%,100%,.1) 1px,transparent 0),linear-gradient(180deg,hsla(0,0%,100%,.1) 1px,transparent 0);
   }
   .timeContainer{
     justify-content: center;
@@ -192,7 +196,7 @@ a {
     padding: 0px;
   }
   .boxTimer{
-    border-radius: 15px;
+    border-radius: 0px;
     width: 5rem;
     margin: 5px;
     font-size: 30px;
@@ -213,14 +217,14 @@ a {
   }
   .rightSideIntro{
     background-color: transparent;
-    border :1px solid white;
     margin-bottom: 30px;
     width: 95vw;
     padding: 30px;
     height: fit-content;
-    background-image: url('../public/letsgo.svg');
+    background-image: url('https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/UUID-cl9fheozm0265qdnhgsqd1lx1/public');
     background-repeat: no-repeat;
-    background-position-x:230px;
+    background-position-x:-35px;
+    background-position-y:-90px ;
   }
   .rightSideVid{
     display: none;
@@ -229,18 +233,18 @@ a {
     margin-top:0rem;
   }
   .firstViewer img{
-    border-radius: 35px;
     height: 500px;
     width: 100vw;
-    filter: brightness(.6);
+    filter: brightness(.9) ;
+    -webkit-mask-image: radial-gradient(75% 181% at 47% 31%, black 16%, transparent 115%);
   }
   .firstViewer h2{
     position: absolute;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 35px;
+    line-height: 40px;
     text-align: center;
     padding: 5px;
-  
+    filter: drop-shadow(rgba(255, 215, 77, 0.6) -1px -1px 2px) drop-shadow(rgba(124, 127, 255, 0.6) 1px 1px 2px);
   }
 
   .firstViewerButton{
@@ -251,14 +255,18 @@ a {
     justify-content: center;
     align-items: center;
     width:95vw;
-    border-radius: 55px;
-    background-color: #DADCE0;
-    border:1px solid white;
+    background-image: url('https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg');
+    background-color: black;
+    border: 4px solid rgb(64, 221, 255);
+    border-radius: 24px;
+    box-shadow: rgb(64, 221, 255) 0px ;
+    -webkit-mask-image: radial-gradient(75% 181% at 47% 31%, black 16%, transparent 115%);
+
   }
   .aboutTextContainer{
     flex-direction: column;
     justify-content: flex-start;
-    color: black;
+    color: white;
     padding: 10px;
     width: 100%;
     text-align: left;
@@ -276,7 +284,10 @@ a {
   .buttonMain{
     width: 200px;
     color:black;
-    border:  1px solid black;
+    border:  1px solid white;
+    clip-path: polygon(12px 0px, 100% 0px, 100% 72%, calc(100% - 12px) 100%, 0px 100%, 0px 12px);
+    background-color: white;
+    border-radius: 0px;
   }
   .buttonMain:hover{
     background-color:#202124;
@@ -373,16 +384,19 @@ a {
     font-size: 2rem;
     font-weight: 500;
     color: #DADCE0;
-    border-radius: 25px;
     height: auto;
     margin:30px;
     width: 70vw;
     padding: 10px;
     border: 1px solid white;
+    clip-path: polygon(12px 0px, 100% 0px, 100% 72%, calc(100% - 12px) 100%, 0px 100%, 0px 12px);
+    -webkit-mask-image: radial-gradient(100% 137% at 37% 75%, black 26%, transparent 87%);
   }
   .linkitemactive{
     color: #202124;
     background-color: #DADCE0;
+    background-image: none;
+    -webkit-mask: none;
   }
   @keyframes animbox {
     from{
@@ -429,6 +443,24 @@ a {
     width: 300px;
     margin-top:90px;
   
+  }
+  @keyframes move-text {
+    0% {
+      transform: translateX(0px);
+  }
+  
+  100% {
+      transform: translateX(calc(-100% - 10px));
+  }
+  }
+  .textmarquee ul{
+    animation: 10s linear 0s infinite normal forwards running move-text;
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+    justify-content: space-around;
+    min-width: 100%;
+    font-size: 50px;
   }
 }
 * {

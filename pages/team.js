@@ -14,10 +14,10 @@ export default function Team(){
     const [isscroll,setScroll] = useState(true);
     const [selected,setSelect] = useState("technical");
     const data = [
-    {id:1,name:'sanjay',pos:'technical head',cat:'technical'},
-    {id:2,name:'aswin',pos:'asset designer',cat:'technical'},
-    {id:3,name:'sreedhar',pos:'lead developer',cat:'technical'},
-    {id:4,name:'priya',pos:'data management',cat:'technical'},
+    {id:1,name:'sanjay',pos:'technical head',cat:'technical',contact:'#',type:'twitter'},
+    {id:2,name:'aswin',pos:'website logo designer',cat:'technical',contact:'#',type:'github'},
+    {id:3,name:'sreedhar',pos:' developer',cat:'technical',contact:'https://github.com/mellofordev/',type:'github'},
+    {id:4,name:'priya',pos:'data management',cat:'technical',contact:'https://github.com/Piyuse',type:'github'},
     ]
     const activestyle = {backgroundColor:'white',color:'#202124'};
    
@@ -38,26 +38,23 @@ export default function Team(){
                         <button style={selected=='events' ? activestyle :{} } onClick={()=>setSelect("events")}>committe</button>
                         <button style={selected=='proshow' ? activestyle :{} } onClick={()=>setSelect("proshow")}>management</button>
                     </div>
-                    <div className='overviewContainer' style={{display:'grid',gridTemplateColumns:'auto auto',padding:30,justifyContent:'center',alignItems:'center'}}>
+                    <div className='overviewContainer' style={{display:'grid',gridTemplateColumns:'auto auto',padding:0,gap:50,justifyContent:'flex-end',alignItems:'flex-end',justifyItems:'center'}}>
                         {
                         
                         data.map((i)=>{
                             return(
                                 <motion.div key={i.id} className='overviewBoxContainer'
-                                style={{width:'100%',height:'100%',margin:10}}
+                                style={{width:'130%',height:'100%',margin:0}}
                                 initial={{opacity:0,transform:'translate(-100px)'}}
                                 whileInView={{opacity:1,transform:'translate(0px)'}}
                                 transition={{ ease: "easeOut", duration: 0.8 }}
                                  >
-                                  <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
+                                  <img src={adventtest.src} style={{height:'auto',width:'100%'}}/>
                                   <h2>{i.name}</h2>
-                                  <div style={{display:'flex',flexDirection:'row',justifyContent:'space-around'}}>
-                                    <div style={{display:'flex',flexDirection:'row'}}>
+                                    <div style={{display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                         <p>{i.pos}</p>
-                                        
+                                        <a href={i.contact} target="_blank" style={{textDecoration:'underline'}}>{i.type}</a>                                        
                                     </div>
-                                    <p>{i.cat}</p>
-                                  </div>
                                 </motion.div>
                             );
                         })}

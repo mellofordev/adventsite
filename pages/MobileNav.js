@@ -1,6 +1,6 @@
 import homestyles  from '../styles/Home.module.css';
 import tabstyles from '../styles/TopNavComponent.module.css';
-import advent_logo from '../public/advent_logo/advent_color_black.png';
+import advent_logo from '../public/advent_logo/adventog.png';
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from 'next/router';

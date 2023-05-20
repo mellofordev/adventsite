@@ -48,7 +48,8 @@ export default function Events(){
                 
                 <div className={homestyles.container}>
                     <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
-                    <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' style={{width:'100%'}}>
+                    <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' 
+                    style={{width:'100%',backgroundImage:'url(https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg)',backgroundPosition:'center',backgroundRepeat:'repeat',WebkitMask:'radial-gradient(100% 137% at 37% 75%, black 26%, transparent 87%'}}>
                         <h1>Events</h1>
                     </motion.div>
                     <div className={styles.eventNav}>
@@ -71,7 +72,7 @@ export default function Events(){
                              >
                               <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
                               <h2>{i.event_name}</h2>
-                              <p style={{color:'#DADCE0'}}>{i.event_dis}</p>
+                              <p style={{color:'#DADCE0'}}>{(i.event_dis).length>10 ? (i.event_dis).slice(0,150)+'... see more':i.event_dis}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <p style={{marginRight:30}}>{i.event_type}</p>
                                 <p>speaker: {i.speaker_name}</p>

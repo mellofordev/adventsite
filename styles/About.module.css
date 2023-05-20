@@ -7,7 +7,7 @@
 
 .userbox{
     border-radius: 55px;
-    border: 1px solid #428EFF;
+    border: 1px solid #a355ff;
     width: 100%;
     margin-bottom: 30px;
     padding:10px;
@@ -63,10 +63,10 @@
     height: 15px;
     width:15px;
     border-radius: 55%;
-    background-color: #428EFF;
+    background-color: #a355ff;
     margin-left: -6px;
 }
 .verticalLine{
-    border-left: 3px solid #428EFF;
+    border-left: 3px solid #a355ff;
     height: 100px;
 }
