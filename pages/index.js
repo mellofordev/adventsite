@@ -101,8 +101,8 @@ export default function Home() {
             <button className='buttonMain' onClick={()=>{window.open('https://docs.google.com/forms/d/e/1FAIpQLSevuJ7wR2xlvs6dJ3JRoRvsdPNY4idsCq-lWc6IK5VFBQbClw/viewform')}} style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
           </div>
         </div>
-        <h1>Our sponsors</h1>
-        <div className='overviewContainer'>
+        {/* <h1>Our sponsors</h1> */}
+        {/* <div className='overviewContainer'>
 
           {sponsors.map((i)=>{
             return(
@@ -116,7 +116,7 @@ export default function Home() {
             );
           }) 
           }
-        </div>
+        </div> */}
       </div>
     </div>
     <Footer/>

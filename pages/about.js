@@ -6,7 +6,7 @@ import styles from '../styles/About.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';
 import advent_mech from '../public/advent/advent_mech.jpg';
-import advent_riding from '../public/advent/advent_riding.jpg';
+import advent_riding from '../public/advent/autoexpo.jpg';
 import advent_welding from '../public/advent/advent_welding.jpg';
 export default function About(){
     const [isopened,setOpened]=useState(false);
