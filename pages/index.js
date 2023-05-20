@@ -91,7 +91,7 @@ export default function Home() {
         </motion.div>
         <div className='aboutContainer' style={{backgroundColor:'transparent',backgroundImage:'none',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
-            <img src='https://adventapi.pythonanywhere.com/media/eventpics/caposter.jpeg' style={{height:'auto',width:'100%'}}/>
+            <img src='https://adventapi.pythonanywhere.com/media/eventpics/ca_new.jpeg' style={{height:'auto',width:'100%'}}/>
             <button className='buttonMain' onClick={()=>{window.open('https://docs.google.com/forms/d/e/1FAIpQLSevuJ7wR2xlvs6dJ3JRoRvsdPNY4idsCq-lWc6IK5VFBQbClw/viewform')}} style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
           </div>
         </div>
