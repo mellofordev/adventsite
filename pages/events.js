@@ -67,10 +67,12 @@ export default function Events(){
                         <motion.div  key={i.id} className='overviewBoxContainer'
                             initial={{opacity:0,transform:'translate(-100px)'}}
                             whileInView={{opacity:1,transform:'translate(0px)'}}
+                            animate={{transform:'scale(0.5)'}}
                             transition={{ ease: "easeOut", duration: 0.8 }}
                             onClick={()=>{window.open(i.event_redirect_link)}}
                              >
-                              <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}/>
+                              <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}
+                              />
                               <h2>{i.event_name}</h2>
                               <p style={{color:'#DADCE0'}}>{(i.event_dis).length>10 ? (i.event_dis).slice(0,150)+'... see more':i.event_dis}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
