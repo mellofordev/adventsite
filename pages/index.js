@@ -64,11 +64,13 @@ export default function Home() {
               initial={{opacity:0,transform:'translate(-100px)'}}
               whileInView={{opacity:1,transform:'translate(0px)'}}
               transition={{ ease: "easeOut", duration: 0.8 }}
+              style={{borderRadius:10,clipPath:'polygon(0px 0px, 100% 0px, 100% 90%, calc(100% - 58px) 100%, 0px 100%, 0px 39px)',border:'none',backgroundColor:'#202124'}}
                >
                 <motion.img src={i.pic} 
                  initial={{opacity:0,transform:'scale(0.7)'}}
                  whileInView={{opacity:1,transform:'scale(1)'}}
                  transition={{ ease:'easeIn', duration: 0.2 }}
+                 style={{borderRadius:0}}
                 />
                 <h2>{i.name}</h2>
               </motion.div>

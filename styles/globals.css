@@ -161,9 +161,10 @@ a {
   height: 90%;
 }
 .rightSideIntro{
-  border-radius: 25px;
+  border-radius: 0px;
   padding: 45px;
   background-color: #ff5145;
+  
 }
 .mobileView{
   display: none;
@@ -225,6 +226,7 @@ a {
     background-repeat: no-repeat;
     background-position-x:-35px;
     background-position-y:-90px ;
+    clip-path: polygon(28px 0px, 100% 0px, 100% 72%, calc(100% - 9px) 100%, 0px 100%, 0px 65px);
   }
   .rightSideVid{
     display: none;
