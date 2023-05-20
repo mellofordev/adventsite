@@ -50,7 +50,11 @@ export default function Home() {
           </div>
         </div>
         <div className='firstViewer'>
-          <img src='https://i.ibb.co/VJCtk86/hackit.png'/>
+          <motion.img src='https://i.ibb.co/VJCtk86/hackit.png'
+                           initial={{opacity:0,transform:'scale(0.9)'}}
+                           whileInView={{opacity:1,transform:'scale(1)'}}
+                           transition={{ ease:'easeIn', duration: 0.3 }}
+          />
           <h2>Come and experience Engineering playaza</h2>
           <button className='firstViewerButton' onClick={()=>router.push('/events')}>explore events</button>
         </div>
@@ -63,7 +67,11 @@ export default function Home() {
               whileInView={{opacity:1,transform:'translate(0px)'}}
               transition={{ ease: "easeOut", duration: 0.8 }}
                >
-                <img src={i.pic} />
+                <motion.img src={i.pic} 
+                 initial={{opacity:0,transform:'scale(0.7)'}}
+                 whileInView={{opacity:1,transform:'scale(1)'}}
+                 transition={{ ease:'easeIn', duration: 0.2 }}
+                />
                 <h2>{i.name}</h2>
               </motion.div>
             );
