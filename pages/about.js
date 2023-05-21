@@ -22,7 +22,10 @@ export default function About(){
     const advent_pics = [
         {id:1,pic:advent_mech.src},
         {id:2,pic:advent_riding.src},
-        {id:3,pic:advent_welding.src}                    
+        {id:3,pic:advent_welding.src} ,                   
+        {id:1,pic:advent_mech.src},
+        {id:2,pic:advent_riding.src},
+        {id:3,pic:advent_welding.src},                    
     ]
     var index=0;
     useEffect(()=>{
@@ -47,11 +50,13 @@ export default function About(){
              }
              <div>
                 
+                
                 <div className={homestyles.container}>
                     <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
-                    {/* <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' style={{width:'100%'}}>
-                        <h1>About</h1>
-                    </motion.div> */}
+                    <motion.div initial={{opacity:0}} whileInView={{opacity:0.9}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' 
+                    style={{width:'100%',backgroundImage:'url(https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg)',backgroundPosition:'center',backgroundRepeat:'repeat',WebkitMask:'radial-gradient(100% 137% at 37% 75%, black 26%, transparent 87%'}}>
+                        <h1 className="AboutTitle">About</h1>
+                    </motion.div>
                     <div className={styles.chatflex}>
                         <div className={styles.userbox}>
                             <h3>prompt : what is advent</h3>
@@ -61,6 +66,7 @@ export default function About(){
                             <p id="text"></p>
                         </div>
                     </div>
+                    <h2>Image Gallery</h2>
                     <div className={styles.aboutPicContainer}>
                         {
                         count==textItem.length && 
@@ -80,7 +86,7 @@ export default function About(){
                         <motion.div className={styles.legacy}
                         initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} 
                         >
-                            <h1>Legacy</h1>
+                            {/* <h1>Legacy</h1>
                             <div className={styles.legacyViewer}>
                                 <p>Kicked off in 2007</p>
                                 <div className={styles.verticalFlex}>
@@ -95,7 +101,7 @@ export default function About(){
                                     <div className={styles.circle}></div>
                                 </div>
                                 <p>Advent'22</p>
-                            </div>
+                            </div> */}
                         </motion.div>
                     }
                 </div>

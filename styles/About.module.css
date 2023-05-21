@@ -1,9 +1,6 @@
-@media (min-width:801px) {
-    .chatflex{
-        width:50%;
-    }
-}
+
 .chatflex{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,26 +8,30 @@
 }
 
 .userbox{
-    border-radius: 55px;
-    border: 1px solid white;
+    border-radius: 6px;
+    /* border: 1px solid rgba(255, 255, 255, 0.384); */
     width: 100%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     padding:10px;
+    /* font-family: 'ProductSansBold'; */
 
 }
 .aibox{
-    border-radius: 25px;
+    /* padding: 1em; */
+    border-radius:2px;
     background-color: #202124;
     height: auto;
-    padding: 5px;
+    padding: 1em;
     width: 100%;
     position: relative;
     
 }
 .aibox p{
-    font-size: 20px;
-    padding-left: 5px;
+    font-size: 18px;
+    padding-inline: 1em;
+
     text-align: left;
+    font-family: 'ProductSansRegular';
 }
 .aboutPicContainer{
     display: flex;
@@ -38,12 +39,24 @@
     justify-content: flex-start;
     align-items: flex-start;
     overflow-x: scroll;
-    margin-top: 30px;
+    margin-block: 2em;
 }
+.aboutPicContainer::-webkit-scrollbar {
+   display: none;
+ 
+  }
+  
+  .aboutPicContainer::-webkit-scrollbar-thumb {
+   /* display: none; */
+   background-color: #a455ff30;
+
+  }
+
+
 .aboutPicContainer img{
     height: 200px;
     width:200px;
-    border-radius: 25px;
+    border-radius: px;
     margin-left: 20px;
     object-fit: cover;
 
@@ -74,4 +87,16 @@
 .verticalLine{
     border-left: 3px solid #a355ff;
     height: 100px;
+}
+/* @media (max-width:801px) {
+    .chatflex{
+        width:50%;
+    }
+} */
+@media (max-width:400px) {
+    .aibox p{
+        font-size: 16px;
+        padding-inline: 1em;
+    
+    }
 }
