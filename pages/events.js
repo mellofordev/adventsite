@@ -47,7 +47,7 @@ export default function Events(){
                     <div className={styles.eventNav}>
                         <button style={selected=='all' ? activestyle :{} } onClick={()=>setSelect("all")}>all</button>
                         <button style={selected=='workshop' ? activestyle :{} } onClick={()=>{setSelect("workshop")}}>workshops</button>
-                        <button style={selected=='event' ? activestyle :{} } onClick={()=>setSelect("event")}>events</button>
+                        <button style={selected=='event' ? activestyle :{} } onClick={()=>setSelect("event")}>competition</button>
                         <button style={selected=='non-technical' ? activestyle :{} } onClick={()=>setSelect("non-technical")}>culturals</button>
                     </div>
                     <div className='overviewContainer'>
@@ -74,7 +74,7 @@ export default function Events(){
                               <p style={{color:'#DADCE0'}}>{(i.event_dis).length>10 ? (i.event_dis).slice(0,150)+'... see more':i.event_dis}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <p style={{marginRight:30}}>{i.event_type}</p>
-                                <p>speaker: {i.speaker_name}</p>
+                                <p>by : {i.speaker_name}</p>
                                 
                               </div>
                               <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',border:0}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
