@@ -53,7 +53,11 @@ export default function Events(){
                         {
                         loading==true ? <h1>loading...</h1>
                         :(
-                        data.length==0 ? <h1>{selected} coming soon</h1> :(
+                        data.length==0 ? 
+                        <div style={{height:'40vh'}}>
+                            <h1>{selected} coming soon</h1>
+                        </div>
+                        :(
                         data.map((i)=>{
                             return(
                         <motion.div  key={i.id} className='overviewBoxContainer'
