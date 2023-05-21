@@ -71,10 +71,12 @@ export default function Events(){
                               <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}
                               />
                               <h2>{i.event_name}</h2>
+
                               <p style={{color:'#9A9A9A'}}>{(i.event_dis).length>10 ? (i.event_dis).slice(0,150)+'... see more':i.event_dis}</p>
                               <div >
                                 <p className="eventType" style={{marginRight:15}}>{i.event_type} </p>
                                 <p className="speakerName">- {i.speaker_name}</p>
+
                                 
                               </div>
                               <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',border:0}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
