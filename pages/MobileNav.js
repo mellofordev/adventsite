@@ -20,7 +20,7 @@ export default function MobileNav({setOpened,setScroll}){
                   <Link href={'/'} className={router.asPath=='/' ? 'linkitem linkitemactive':'linkitem'}>Home</Link>
                   <Link href={'/about'} className={router.asPath=='/about' ? 'linkitem linkitemactive':'linkitem'}>About</Link>
                   <Link href={'/events'} className={router.asPath=='/events' ? 'linkitem linkitemactive':'linkitem'}>Events</Link>
-                  <Link target={'_blank'} href={'https://www.cultaway.in'} className={router.asPath=='/cult11' ? 'linkitem linkitemactive':'linkitem'}>Cult11</Link>
+                  <Link target={'_blank'} href={'https://instagram.com/cult_a_way'} className={router.asPath=='/cult11' ? 'linkitem linkitemactive':'linkitem'}>Cult11</Link>
                 </div>
         </div>
     );
