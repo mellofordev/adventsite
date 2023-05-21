@@ -71,7 +71,7 @@ export default function Events(){
                               <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}
                               />
                               <h2>{i.event_name}</h2>
-                              <p style={{color:'#DADCE0'}}>{i.event_dis}</p>
+                              <p style={{color:'#DADCE0',whiteSpace:'pre-wrap'}}>{i.event_dis}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <p style={{marginRight:30}}>{i.event_type}</p>
                                 <p>by : {i.speaker_name}</p>
