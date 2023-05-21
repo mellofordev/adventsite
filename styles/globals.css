@@ -21,6 +21,7 @@ body {
   user-select: none;
   -webkit-user-select: none;
   /* letter-spacing: -1px; */
+  transition: 0.5s ease-in-out;
 }
 @font-face {
   font-family: 'retrolight';
@@ -29,6 +30,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+button:hover{
+  cursor: pointer;
 }
 
 .firstViewer{
