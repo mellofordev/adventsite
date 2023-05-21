@@ -7,11 +7,6 @@
   src: url('../public/font/product-sans/ProductSansRegular.ttf');
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   padding: 0;
@@ -118,19 +113,46 @@ a {
 
 }
 .buttonMain:hover{
-  background-color: white;
+  background-color: rgb(255, 142, 142);
+}
+
+.eventContainer{
+  overflow:hidden;
+  padding-block: 2%;
+  
+}
+.EventsTitle{
+  font-size: 64px;
+  text-transform: uppercase;
+  color:#428EFF;
+  letter-spacing: 4px;
 }
 .overviewContainer{
   display: flex;
   flex-direction: row;
+  overflow-x:scroll;
+  /* max-width: 100vw; */
   justify-content: space-around;
   align-items: center;
-  margin: 30px;
+  gap: 2em;
+  /* margin: 30px; */
+}
+.overviewContainer::-webkit-scrollbar {
+  /* display: hidden; */
+  background-color: rgb(0, 0, 0);
+  height: 10px;
+  border-radius: 12px;
+
+}
+.overviewContainer::-webkit-scrollbar-thumb {
+  /* display: hidden; */
+  background-color: rgb(44, 44, 44);
 }
 .overviewContainer h1{
   display: none;
 }
 .overviewBoxContainer{
+  /* clip-path:  polygon(18px 0px, 100% 0px, 100% 92%, calc(100% - 0px) 100%, 0px 100%, 0px 40px); */
   display: flex;
   flex-direction: column;
   background-color: transparent;
@@ -140,12 +162,12 @@ a {
   height: 200px;
   width: 300px;
   object-fit: cover;
-  border-radius: 25px;
+  /* border-radius: 25px; */
  
 }
 .overviewBoxContainer:hover{
-  border: 1px solid white;
-  border-radius: 25px;
+  border: 3px solid #a355ff;
+  /* border-radius: 25px; */
 }
 .circlePattern{
   border-radius: 55%;
@@ -157,8 +179,6 @@ a {
   cursor: pointer;
   border-radius: 95px;
   background-color: #ff5145;
-
-
 }
 .flexContainer{
   display: flex;
@@ -238,21 +258,23 @@ a {
   object-fit:cover ;
 }
 
-@media(max-width:1200px){
+@media(max-width:800px){
   .flexContainer{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+
   }
 
 }
 
 
-@media(max-width:600px){
+@media(max-width:520px){
 
   .flexContainer{
     margin-top: -50px;
     flex-direction: column;
+    
     min-height: 100vh;
     background-size: 60px 80px;
     background-image: linear-gradient(90deg,hsla(0,0%,100%,.1) 1px,transparent 0),linear-gradient(180deg,hsla(0,0%,100%,.1) 1px,transparent 0);
@@ -373,8 +395,8 @@ a {
     display: block;
   }
   .overviewBoxContainer{
-    border-radius: 25px;
-    margin-bottom: 30px;
+    /* border-radius: 25px; */
+    /* margin-bottom: 30px; */
     border: 1px solid white;
     width: 120%;
   }
@@ -521,4 +543,14 @@ a {
     min-width: 100%;
     font-size: 50px;
   }
+}
+* {
+  box-sizing: border-box;
+}
+.speakerStyle p{
+  color: #428EFF;
+}
+
+.speakerName{
+  color: #a355ff;
 }

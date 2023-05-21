@@ -3,28 +3,38 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border-radius: 25px;
-    height: 60px;
-    width: 99%;
-    background:linear-gradient(hsla(0,0%,100%,.08),black) ;
+    border-radius: 3px;
+    box-sizing: border-box;
+    /* height: 60px; */
+    /* width: 99%; */
+    /* background:linear-gradient(hsla(0,0%,100%,.08),black) ; */
+    margin-block: 2%;
     padding: 10px;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
     top: 0;
     z-index: 30;
     overflow-x: scroll;
     overflow-y: hidden;
+    clip-path:  polygon(18px 0px, 100% 0px, 100% 42%, calc(100% - 0px) 100%, 0px 100%, 0px 20px);
+}
+.eventNav::-webkit-scrollbar {
+    display: none;
 }
 .eventNav button{
     height: 40px;
     width: 200px;
-    border-radius: 18px;
-    margin: 5px;
+    border-radius: 2px;
+    /* margin: 5px; */
     border: 0;
     background-color: transparent;
     color: white;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.327);
+    
+
+
     font-weight: 500;
+    clip-path:  polygon(18px 0px, 100% 0px, 100% 42%, calc(100% - 0px) 100%, 0px 100%, 0px 20px);
 }
 
 .buttonactive{
