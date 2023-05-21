@@ -12,7 +12,6 @@ export default function Team(){
     const [selected,setSelect] = useState("technical");
     const data = [
     {id:1,name:'sanjay',pos:'technical head',cat:'technical',contact:'#',type:'twitter'},
-    {id:2,name:'aswin',pos:'website logo designer',cat:'technical',contact:'#',type:'github'},
     {id:3,name:'sreedhar',pos:' developer',cat:'technical',contact:'https://github.com/mellofordev/',type:'github'},
     {id:4,name:'priya',pos:'data management',cat:'technical',contact:'https://github.com/Piyuse',type:'github'},
     ]
@@ -46,7 +45,7 @@ export default function Team(){
                                 whileInView={{opacity:1,transform:'translate(0px)'}}
                                 transition={{ ease: "easeOut", duration: 0.8 }}
                                  >
-                                  <img src={adventtest.src} style={{height:'auto',width:'100%'}}/>
+                                  <img src={'https://i.pinimg.com/550x/18/b9/ff/18b9ffb2a8a791d50213a9d595c4dd52.jpg'} style={{height:'auto',width:'100%'}}/>
                                   <h2>{i.name}</h2>
                                     <div style={{display:'flex',flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                         <p>{i.pos}</p>
