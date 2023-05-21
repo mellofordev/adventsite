@@ -50,11 +50,13 @@ export default function About(){
              }
              <div>
                 
+                
                 <div className={homestyles.container}>
                     <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
-                    {/* <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' style={{width:'100%'}}>
-                        <h1>About</h1>
-                    </motion.div> */}
+                    <motion.div initial={{opacity:0}} whileInView={{opacity:0.9}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' 
+                    style={{width:'100%',backgroundImage:'url(https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg)',backgroundPosition:'center',backgroundRepeat:'repeat',WebkitMask:'radial-gradient(100% 137% at 37% 75%, black 26%, transparent 87%'}}>
+                        <h1 className="AboutTitle">About</h1>
+                    </motion.div>
                     <div className={styles.chatflex}>
                         <div className={styles.userbox}>
                             <h3>prompt : what is advent</h3>

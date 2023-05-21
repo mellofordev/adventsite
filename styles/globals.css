@@ -127,6 +127,13 @@ a {
   color:#428EFF;
   letter-spacing: 4px;
 }
+.AboutTitle{
+  font-size: 64px;
+  text-transform: uppercase;
+  color:#ffbd42;
+  letter-spacing: 4px;
+}
+
 .overviewContainer{
   display: flex;
   flex-direction: row;
@@ -205,6 +212,7 @@ a {
   padding: 10px;
   clip-path:  polygon(28px 0px, 100% 0px, 100% 72%, calc(100% - 0px) 100%, 0px 100%, 0px 20px);
 }
+
 .boxTimer h1{
   font-family: 'retrolight';
   font-weight:lighter;
@@ -212,8 +220,42 @@ a {
   color: #428EFF;
 }
 .boxTimer h2{
-  font-size: 30px;
+  font-size: 20px;
+  font-family: 'ProductSansRegular';
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
+.boxTimer:hover{
+  cursor: pointer;
+}
+.boxTimer:nth-child(1):hover,.boxTimer:nth-child(1) h1:hover{
+  color: rgb(239, 239, 239);
+  background-color: #428EFF;
+}
+.boxTimer:nth-child(2):hover ,.boxTimer:nth-child(4) h2:hover{
+ 
+  background-color: #ff5145;
+  color:#000000;
+}
+.boxTimer:nth-child(3):hover,.boxTimer:nth-child(3) h1:hover{
+  background-color:#a355ff;
+  color: rgb(239, 239, 239);
+}
+.boxTimer:nth-child(4):hover,.boxTimer:nth-child(4) h2:hover ,.boxTimer:nth-child(4) h1:hover{
+  color:#000000;
+  background-color:#ffbd42;
+}
+.boxTimer h2:nth-child(4){
+  color: #000000;
+}
+.boxTimer:nth-child(2) h1:hover{
+  color:#000000;
+}
+/* .boxTimer:nth-child(4) h1:hover, .boxTimer:nth-child(4) h2:hover{
+  color:#000000;
+  
+} */
+
 .rightSide{
   display: flex;
   flex-direction: column;
