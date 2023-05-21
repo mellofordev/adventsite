@@ -31,8 +31,15 @@ a {
   color: inherit;
   text-decoration: none;
 }
+button{
+  transition: 0.5s;
+  font-family: "ProductSansBold";
+  text-transform: uppercase;
+  /* text-transform: lowercase; */
+}
 button:hover{
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .firstViewer{
@@ -112,13 +119,15 @@ button:hover{
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #202124;
-  border-color: white;
+  /* border-color: white; */
   color:black;
   clip-path: polygon(12px 0px, 100% 0px, 100% 72%, calc(100% - 12px) 100%, 0px 100%, 0px 12px);
 
 }
 .buttonMain:hover{
-  background-color: rgb(255, 142, 142);
+  background-color: #ff5145;
+  color: rgb(255, 255, 255);
+  border: hidden;
 }
 
 .eventContainer{
@@ -216,7 +225,7 @@ button:hover{
   font-size: 70px;
   padding: 10px;
   clip-path:  polygon(28px 0px, 100% 0px, 100% 72%, calc(100% - 0px) 100%, 0px 100%, 0px 20px);
-  transition:0.25s ease-in-out;
+  transition:0.5s ease-in-out;
 
 }
 
