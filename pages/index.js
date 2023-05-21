@@ -57,7 +57,7 @@ export default function Home() {
           <h2>Come and experience Engineering playaza</h2>
           <button className='firstViewerButton' onClick={()=>router.push('/events')}>explore events</button>
         </div>
-        <div className='overviewContainer'>
+        {/* <div className='overviewContainer'>
           <h1>What we got for you?</h1>
           {overview_data.map((i)=>{
             return(
@@ -78,7 +78,7 @@ export default function Home() {
             );
           }) 
           }
-        </div>
+        </div> */}
         <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{ease
         :'easeIn',duration:2}} className='aboutContainer'
         >
