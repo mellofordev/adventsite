@@ -77,7 +77,7 @@ export default function Events(){
                                 <p>speaker: {i.speaker_name}</p>
                                 
                               </div>
-                              <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
+                              <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',border:0}}>{i.event_prize==0 ? 'FREE' :'₹'+i.event_prize}</button>
                         </motion.div>
                             );
                         })))}

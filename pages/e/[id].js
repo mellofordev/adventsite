@@ -72,7 +72,7 @@ export default function E(){
                               <h2>{data.event_name}</h2>
                               <p style={{backgroundColor:'white',borderRadius:10,color:'black',height:40,width:100,fontSize:30,textAlign:'center'}}>{data.event_prize==0 ? 'FREE' :'₹'+data.event_prize}</p>
                               <p style={{fontSize:18}}>{moment(data.event_date).utc().format('MM/DD/YYYY')}</p>
-                              <p style={{color:'#DADCE0'}}>{data.event_dis}</p>
+                              <p style={{color:'#DADCE0',whiteSpace:'pre-wrap'}}>{data.event_dis}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <p style={{marginRight:30}}>{data.event_type}</p>
                                 <p>speaker: {data.speaker_name}</p>
