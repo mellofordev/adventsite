@@ -9,7 +9,7 @@ import {motion} from 'framer-motion';
 export default function Events(){
     const [isopened,setOpened]=useState(false);
     const [isscroll,setScroll] = useState(true);
-    const [selected,setSelect] = useState("workshop");
+    const [selected,setSelect] = useState("all");
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
 
@@ -45,10 +45,10 @@ export default function Events(){
                         <h1>Events</h1>
                     </motion.div>
                     <div className={styles.eventNav}>
+                        <button style={selected=='all' ? activestyle :{} } onClick={()=>setSelect("all")}>all</button>
                         <button style={selected=='workshop' ? activestyle :{} } onClick={()=>{setSelect("workshop")}}>workshops</button>
                         <button style={selected=='event' ? activestyle :{} } onClick={()=>setSelect("event")}>events</button>
                         <button style={selected=='non-technical' ? activestyle :{} } onClick={()=>setSelect("non-technical")}>culturals</button>
-                        <button style={selected=='all' ? activestyle :{} } onClick={()=>setSelect("all")}>all</button>
                     </div>
                     <div className='overviewContainer'>
                         {
