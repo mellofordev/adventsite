@@ -12,16 +12,19 @@
     position: sticky;
     top: 0;
     z-index: 30;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .eventNav button{
     height: 40px;
     width: 200px;
-    border-radius: 25px;
+    border-radius: 18px;
     margin: 5px;
     border: 0;
     background-color: transparent;
     color: white;
     border: 1px solid white;
+    font-weight: 500;
 }
 
 .buttonactive{

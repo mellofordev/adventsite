@@ -47,7 +47,8 @@ export default function Events(){
                     <div className={styles.eventNav}>
                         <button style={selected=='workshop' ? activestyle :{} } onClick={()=>{setSelect("workshop")}}>workshops</button>
                         <button style={selected=='event' ? activestyle :{} } onClick={()=>setSelect("event")}>events</button>
-                        <button style={selected=='proshow' ? activestyle :{} } onClick={()=>setSelect("proshow")}>proshow</button>
+                        <button style={selected=='non-technical' ? activestyle :{} } onClick={()=>setSelect("non-technical")}>culturals</button>
+                        <button style={selected=='all' ? activestyle :{} } onClick={()=>setSelect("all")}>all</button>
                     </div>
                     <div className='overviewContainer'>
                         {

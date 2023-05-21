@@ -1,3 +1,8 @@
+@media (min-width:801px) {
+    .chatflex{
+        width:50%;
+    }
+}
 .chatflex{
     display: flex;
     flex-direction: column;
