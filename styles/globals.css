@@ -615,3 +615,54 @@ button:hover{
 .speakerName{
   color: #a355ff;
 }
+
+
+.FooterContainer {
+  max-height: 50vh;
+  background: linear-gradient(-45deg, #428EFF, #a355ff);
+  /* background-size: 400% 400%; */
+  animation: gradient 15s ease infinite;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  color: white;
+  background-color: #f44e1c;
+  background-size: 400% 400%;
+  justify-items: center;
+
+
+}
+.overallFooter a{
+  font-size: 32px;
+  color: #000000;
+}
+
+.overallFooter{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.contentConatiner {
+  text-transform: uppercase;
+  display: grid;
+  justify-items: center;
+  gap: 2em;
+  grid-template-columns: 1fr 1fr;
+}
+.contentConatiner a{
+  font-size: 20px;
+  color: #ffffff;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

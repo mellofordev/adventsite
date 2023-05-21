@@ -1,0 +1,16 @@
+.FooterContainer {
+    background: linear-gradient(-45deg, #f44e1c, #f54186, #22b0e3, #36f4c7);
+    /* background-size: 400% 400%; */
+    animation: gradient 15s ease infinite;
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    background-color: #f44e1c;
+
+}
+
+.contentConatiner {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
