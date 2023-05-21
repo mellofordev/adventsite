@@ -27,7 +27,6 @@ export default function TopNavComponent({setOpened,setScroll}){
           <div className={router.asPath=='/' ? 'item activeLink':'item'}><Link href={'/'}>home</Link></div>
           <div className={router.asPath=='/about' ? 'item active':'item'}><Link href={'/about'}>about</Link></div>
           <div className={router.asPath=='/events' ? 'item active':'item'}><Link href={'/events'}>events</Link></div>
-          <div className={router.asPath=='/cult11' ? 'item active':'item'}><Link href={'/cult11'}>cult11</Link></div>
         </nav>
       </header>
       </>

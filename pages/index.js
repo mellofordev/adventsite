@@ -8,6 +8,7 @@ import TimeCounter from './TimeCounter';
 import MobileNav from './MobileNav';
 import Footer from './Footer';
 import {useRouter} from 'next/navigation';
+
 export default function Home() {
   const overview_data = [{id:1,name:'Tech expo',pic:'https://i.ibb.co/1bB41SL/cart.jpg'},
                          {id:2,name:'Culturals',pic:'https://i.ibb.co/DtWNp2b/cultural2.jpg'},
@@ -43,7 +44,7 @@ export default function Home() {
               <motion.img initial={{opacity:0,}} whileInView={{opacity:1,}} transition={{duration:5}} src={'https://hacktoberfest.com/_next/static/media/repeater.6bd785ac.svg'} style={{marginLeft:0}}/>
             </div>
             <div className='rightSideVid'>
-              <iframe width="100%" height="300" style={{borderRadius:25,margin:5}} src="https://www.youtube.com/embed/kRQZ803JrbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media"></iframe>
+              <motion.img initial={{opacity:0,}} whileInView={{opacity:1,}} transition={{duration:5}} src={'https://hacktoberfest.com/_next/static/media/repeater.6bd785ac.svg'} style={{marginLeft:0,height:'100%',width:'100%'}}/>
             </div>
           </div>
         </div>
@@ -84,14 +85,14 @@ export default function Home() {
           <div className='aboutTextContainer'>
             <h1>Advent is the annual tech fest brought to you by Cult a way </h1>
             <button className='buttonMain' onClick={()=>router.push('/about')}>See the legacy</button>
-            <motion.img src={advent_logo_black.src} className='aboutImage' alt='about image'
+          </div>
+          <motion.img src={advent_logo_black.src} className='aboutImage' alt='about image'
                                        initial={{opacity:0,transform:'scale(0.3)'}}
                                        whileInView={{opacity:1,transform:'scale(1)'}}
                                        transition={{ ease:'easeIn', duration: 0.5 }}
             />
-          </div>
         </motion.div>
-        <div className='aboutContainer' style={{backgroundColor:'transparent',backgroundImage:'none',borderColor:'#b3b3b3',marginTop:'40%',borderRadius:20}}>
+        <div className='aboutContainer campuscontainer' style={{backgroundColor:'transparent',backgroundImage:'none',borderColor:'#b3b3b3',borderRadius:20}}>
           <div className='aboutTextContainer' style={{justifyContent:'center',alignItems:'center'}}>
             <img src='https://adventapi.pythonanywhere.com/media/eventpics/ca_new.jpeg' style={{height:'auto',width:'100%'}}/>
             <button className='buttonMain' onClick={()=>{window.open('https://docs.google.com/forms/d/e/1FAIpQLSevuJ7wR2xlvs6dJ3JRoRvsdPNY4idsCq-lWc6IK5VFBQbClw/viewform')}} style={{position:'absolute',color:'black',borderColor:'#a355ff',backgroundColor:'#a355ff'}}>Apply now</button>
