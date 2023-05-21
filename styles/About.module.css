@@ -1,8 +1,4 @@
-@media (max-width:801px) {
-    .chatflex{
-        width:50%;
-    }
-}
+
 .chatflex{
     
     display: flex;
@@ -91,4 +87,16 @@
 .verticalLine{
     border-left: 3px solid #a355ff;
     height: 100px;
+}
+/* @media (max-width:801px) {
+    .chatflex{
+        width:50%;
+    }
+} */
+@media (max-width:400px) {
+    .aibox p{
+        font-size: 16px;
+        padding-inline: 1em;
+    
+    }
 }
