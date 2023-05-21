@@ -22,7 +22,10 @@ export default function About(){
     const advent_pics = [
         {id:1,pic:advent_mech.src},
         {id:2,pic:advent_riding.src},
-        {id:3,pic:advent_welding.src}                    
+        {id:3,pic:advent_welding.src} ,                   
+        {id:1,pic:advent_mech.src},
+        {id:2,pic:advent_riding.src},
+        {id:3,pic:advent_welding.src},                    
     ]
     var index=0;
     useEffect(()=>{
@@ -61,6 +64,7 @@ export default function About(){
                             <p id="text"></p>
                         </div>
                     </div>
+                    <h2>Image Gallery</h2>
                     <div className={styles.aboutPicContainer}>
                         {
                         count==textItem.length && 
@@ -80,7 +84,7 @@ export default function About(){
                         <motion.div className={styles.legacy}
                         initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} 
                         >
-                            <h1>Legacy</h1>
+                            {/* <h1>Legacy</h1>
                             <div className={styles.legacyViewer}>
                                 <p>Kicked off in 2007</p>
                                 <div className={styles.verticalFlex}>
@@ -95,7 +99,7 @@ export default function About(){
                                     <div className={styles.circle}></div>
                                 </div>
                                 <p>Advent'22</p>
-                            </div>
+                            </div> */}
                         </motion.div>
                     }
                 </div>

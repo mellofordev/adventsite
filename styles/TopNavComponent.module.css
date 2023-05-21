@@ -1,4 +1,5 @@
 .header{
+    padding-top: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,14 +16,16 @@
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    left: 12rem;
+    right: 3rem;
     margin-top: 30px;
 }
 .navitems a{
     margin-right: 30px;
     margin-top: 35px;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 22px;
+    /* font-weight:500; */
+    font-family: 'ProductSansRegular';
+    
 }
 .item{
     margin-right: 30px;
