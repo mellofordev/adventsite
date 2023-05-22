@@ -70,7 +70,10 @@ export default function E(){
                               <img src={`https://adventapi.pythonanywhere.com/${data.event_pic}`} style={{height:'100%'}}
                               />
                               <h2>{data.event_name}</h2>
-                              <p style={{backgroundColor:'white',borderRadius:10,color:'black',height:40,width:100,fontSize:30,textAlign:'center'}}>{data.event_prize==0 ? 'FREE' :'₹'+data.event_prize}</p>
+                              <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+                                <p style={{backgroundColor:'white',borderRadius:10,color:'black',height:40,width:100,fontSize:30,textAlign:'center'}}>{data.event_prize==0 ? 'FREE' :'₹'+data.event_prize}</p>
+                                <img onClick={()=>{window.open(`whatsapp://send?text=Register for ${data.event_name} happening on ${moment(data.event_date).utc().format('MM/DD/YYYY')} for ${data.event_prize==0 ? 'FREE' :'₹'+data.event_prize}  https://advent.cultaway.in/e/${data.id+'\n \n'}`)}} src='https://image.similarpng.com/very-thumbnail/2020/07/Black-and-white-Whatsapp-logo-vector-PNG.png' style={{height:40,width:40,marginTop:30}}/>
+                              </div>
                               <p style={{fontSize:18}}>{moment(data.event_date).utc().format('MM/DD/YYYY')}</p>
                               <p style={{color:'#DADCE0',whiteSpace:'pre-wrap'}}>{data.event_dis}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>

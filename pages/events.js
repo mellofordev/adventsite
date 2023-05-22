@@ -5,14 +5,14 @@ import homestyles from '../styles/Home.module.css';
 import styles from '../styles/Events.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';
-
+import { useRouter } from "next/router";
 export default function Events(){
     const [isopened,setOpened]=useState(false);
     const [isscroll,setScroll] = useState(true);
     const [selected,setSelect] = useState("all");
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
-
+    const router = useRouter();
     const activestyle = {backgroundColor:'white',color:'#202124'};
     const apifetch = () =>{
         setLoading(true);
@@ -47,8 +47,8 @@ export default function Events(){
                     <div className={styles.eventNav}>
                         <button style={selected=='all' ? activestyle :{} } onClick={()=>setSelect("all")}>all</button>
                         <button style={selected=='workshop' ? activestyle :{} } onClick={()=>{setSelect("workshop")}}>workshops</button>
-                        <button style={selected=='event' ? activestyle :{} } onClick={()=>setSelect("event")}>competition</button>
-                        <button style={selected=='non-technical' ? activestyle :{} } onClick={()=>setSelect("non-technical")}>culturals</button>
+                        <button style={selected=='competition' ? activestyle :{} } onClick={()=>setSelect("competition")}>competition</button>
+                        <button style={selected=='expo' ? activestyle :{} } onClick={()=>setSelect("expo")}>expo</button>
                     </div>
                     <div className='overviewContainer'>
                         {
@@ -66,12 +66,12 @@ export default function Events(){
                             whileInView={{opacity:1,transform:'translate(0px)'}}
                             animate={{transform:'scale(0.5)'}}
                             transition={{ ease: "easeOut", duration: 0.8 }}
-                            onClick={()=>{window.open(i.event_redirect_link)}}
+                                onClick={()=>{router.push(`/e/${i.id}`)}}
                              >
                               <img src={`https://adventapi.pythonanywhere.com/${i.event_pic}`} style={{height:'100%'}}
                               />
                               <h2>{i.event_name}</h2>
-                              <p style={{color:'#DADCE0',whiteSpace:'pre-wrap'}}>{i.event_dis}</p>
+                              <p style={{color:'#DADCE0',whiteSpace:'pre-wrap'}}>{(i.event_dis).length < 100 ? i.event_dis  : (i.event_dis).slice(0,98)+' see more...'}</p>
                               <div style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <p style={{marginRight:30}}>{i.event_type}</p>
                                 <p>by : {i.speaker_name}</p>
