@@ -46,7 +46,7 @@ export default function E(){
     return(
         <>
             <Head>
-                <meta property="og:image" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
+                <meta property="og:image:secure_url" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
             </Head>
             {isopened==true && 
             <MobileNav setOpened={setOpened} setScroll={setScroll}/>
