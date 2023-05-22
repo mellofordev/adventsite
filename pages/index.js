@@ -10,9 +10,9 @@ import Footer from './Footer';
 import {useRouter} from 'next/navigation';
 
 export default function Home() {
-  const overview_data = [{id:1,name:'Tech expo',pic:'https://i.ibb.co/1bB41SL/cart.jpg'},
-                         {id:2,name:'Culturals',pic:'https://i.ibb.co/DtWNp2b/cultural2.jpg'},
-                         {id:3,name:'Workshops',pic:'https://i.ibb.co/RyM1RsR/tech.jpg'}
+  const overview_data = [{id:1,name:'Tech Fair',pic:'https://i.ibb.co/gvxgQ27/advent-robot-new.png'},
+                         {id:2,name:'Competitions',pic:'https://i.ibb.co/TcDgj2C/advent-comptetion.png'},
+                         {id:3,name:'Workshops',pic:'https://i.ibb.co/dL616xd/advent-workshop.png'}
                         ];
   const sponsors = [{id:1,pic:'https://i.pinimg.com/originals/a7/23/b9/a723b9d7887212078aaa89e3697b217a.png'},
                         {id:2,pic:'https://cdn.shopify.com/s/files/1/0067/0374/3040/files/white_240x240.png?v=1648004714'},
