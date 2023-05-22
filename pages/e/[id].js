@@ -7,6 +7,7 @@ import Footer from "../Footer";
 import {motion} from 'framer-motion';
 import { useRouter } from "next/router";
 import moment from "moment/moment";
+import Head from "next/head";
 
 export default function E(){
     const router = useRouter();
@@ -44,6 +45,9 @@ export default function E(){
     },[router])
     return(
         <>
+            <Head>
+                <meta property="og:image" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
+            </Head>
             {isopened==true && 
             <MobileNav setOpened={setOpened} setScroll={setScroll}/>
              }
