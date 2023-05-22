@@ -8,7 +8,6 @@ import TimeCounter from './TimeCounter';
 import MobileNav from './MobileNav';
 import Footer from './Footer';
 import {useRouter} from 'next/navigation';
-
 export default function Home() {
   const overview_data = [{id:1,name:'Tech Fair',pic:'https://i.ibb.co/gvxgQ27/advent-robot-new.png'},
                          {id:2,name:'Competitions',pic:'https://i.ibb.co/TcDgj2C/advent-comptetion.png'},
@@ -23,6 +22,24 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
+    {isscroll==true ?
+        <style jsx global>
+            {`
+                body{
+                overflow-y:scroll;
+                }
+            `}
+        </style> 
+        :(
+        <style jsx global>
+            {`
+                body{
+                overflow-y:hidden;
+                }
+            `}
+        </style>
+        )
+    }    
     {isopened==true && 
         <MobileNav setOpened={setOpened} setScroll={setScroll}/>
     }

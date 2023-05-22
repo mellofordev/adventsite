@@ -45,8 +45,27 @@ export default function E(){
     },[router])
     return(
         <>
+            {isscroll==true ?
+                <style jsx global>
+                    {`
+                        body{
+                        overflow-y:scroll;
+                        }
+                    `}
+                </style> 
+                :(
+                <style jsx global>
+                    {`
+                        body{
+                        overflow-y:hidden;
+                        }
+                    `}
+                </style>
+                )
+            } 
             <Head>
                 <meta property="og:image:secure_url" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
+                <meta property="og:image:type" content="image/jpeg"></meta>
             </Head>
             {isopened==true && 
             <MobileNav setOpened={setOpened} setScroll={setScroll}/>

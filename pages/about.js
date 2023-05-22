@@ -42,6 +42,24 @@ export default function About(){
     },[])
     return(
         <>
+    {isscroll==true ?
+        <style jsx global>
+            {`
+                body{
+                overflow-y:scroll;
+                }
+            `}
+        </style> 
+        :(
+        <style jsx global>
+            {`
+                body{
+                overflow-y:hidden;
+                }
+            `}
+        </style>
+        )
+    } 
             {isopened==true && 
             <MobileNav setOpened={setOpened} setScroll={setScroll}/>
              }
