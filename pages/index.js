@@ -20,6 +20,7 @@ export default function Home() {
   const [isopened,setOpened]=useState(false);
   const [isscroll,setScroll] = useState(true);
   const router = useRouter();
+  const isTimerShown = true;
   return (
     <>
     {isscroll==true ?
@@ -48,14 +49,22 @@ export default function Home() {
       <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
       <div className={styles.main}>
         <div className='flexContainer'>
-          <TimeCounter/>
+          {isTimerShown==true &&  <TimeCounter/>
+          }
           <div className='rightSide'>
             <motion.div className='rightSideIntro'
             initial={{opacity:0,transform:'scale(0.7)'}}
             whileInView={{opacity:1,transform:'scale(1)'}}
             transition={{ ease:'easeInOut', duration: 0.8 }}
             >
-              <h1>Let's go It's Advent May 30,2023</h1>
+               {isTimerShown==true ?  <h1>Let's go It's Advent May 30,2023</h1> 
+               :(
+                 <div style={{height:200}}>
+                  <h1>See Today's events</h1>
+                  <button className='buttonMain'>check</button>
+                 </div>
+                 
+               )}
             </motion.div>
             <div className='mobileView'>
               <motion.img initial={{opacity:0,}} whileInView={{opacity:1,}} transition={{duration:5}} src={'https://hacktoberfest.com/_next/static/media/repeater.6bd785ac.svg'} style={{marginLeft:0}}/>
