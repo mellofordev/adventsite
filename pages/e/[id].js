@@ -44,6 +44,9 @@ export default function E(){
     },[router])
     return(
         <>
+            <span itemProp="image" itemScope itemType="image/jpeg"> 
+                <link itemProp="url" href={`https://adventapi.pythonanywhere.com${data.event_pic}`}></link> 
+            </span>
             {isscroll==true ?
                 <style jsx global>
                     {`
