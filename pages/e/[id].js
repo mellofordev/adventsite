@@ -2,7 +2,6 @@ import TopNavComponent from "../TopNavComponent";
 import {  useEffect, useState } from 'react';
 import MobileNav from "../MobileNav";
 import homestyles from '../../styles/Home.module.css';
-import styles from '../../styles/Events.module.css';
 import Footer from "../Footer";
 import {motion} from 'framer-motion';
 import { useRouter } from "next/router";
@@ -64,8 +63,10 @@ export default function E(){
                 )
             } 
             <Head>
-                <meta property="og:image:secure_url" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
+                <meta property="og:image" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
                 <meta property="og:image:type" content="image/jpeg"></meta>
+                <meta property="og:image:height" content="1600"></meta>
+                <meta property="og:image:width" content="1600"></meta>
             </Head>
             {isopened==true && 
             <MobileNav setOpened={setOpened} setScroll={setScroll}/>
