@@ -2,7 +2,6 @@ import TopNavComponent from "./TopNavComponent";
 import {  useEffect, useState } from 'react';
 import MobileNav from "./MobileNav";
 import homestyles from '../styles/Home.module.css';
-import styles from '../styles/Events.module.css';
 import Footer from "./Footer";
 import {motion} from 'framer-motion';
 import { useRouter } from "next/router";
@@ -58,15 +57,15 @@ export default function Happening(){
                     <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
                     <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:2}} viewport={{once:true}} className='rightSideIntro' 
                     style={{width:'100%',backgroundImage:'url(https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg)',backgroundPosition:'center',backgroundRepeat:'repeat',WebkitMask:'radial-gradient(100% 137% at 37% 75%, black 26%, transparent 87%'}}>
-                        <h1>Events</h1>
+                        <h1>Today's Events</h1>
                     </motion.div>
-                    <div className='overviewContainer' style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start'}}>
+                    <div className='overviewContainer' style={{display:'flex',flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start',overflowX:'scroll',gap:10}}>
                         {
                         loading==true ? <h1>loading...</h1>
                         :(
                         data.length==0 ? 
                         <div style={{height:'40vh'}}>
-                            <h1>coming soon</h1>
+                            <h1>no events today</h1>
                         </div>
                         :(
                         data.map((i)=>{
@@ -77,7 +76,7 @@ export default function Happening(){
                             animate={{transform:'scale(0.5)'}}
                             transition={{ ease: "easeOut", duration: 0.8 }}
                                 onClick={()=>{
-                                    i.is_registration_closed==true &&
+                                    i.is_registration_closed==false &&
                                     router.push(`/e/${i.id}`)
                                 }}
                              >
@@ -90,7 +89,7 @@ export default function Happening(){
                                 <p>by : {i.speaker_name}</p>
                                 
                               </div>
-                              <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',border:0}}>{i.is_registration_closed==true ? 'Registration close' :(i.event_prize==0 ? 'FREE' :'₹'+i.event_prize)}</button>
+                              <button className="buttonMain" style={{color:'white',backgroundColor:'#a355ff',border:0}}>{i.is_registration_closed==true ? 'Registration closed' :(i.event_prize==0 ? 'FREE' :'₹'+i.event_prize)}</button>
                         </motion.div>
                             );
                         })))}

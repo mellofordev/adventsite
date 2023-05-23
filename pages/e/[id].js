@@ -7,7 +7,6 @@ import {motion} from 'framer-motion';
 import { useRouter } from "next/router";
 import moment from "moment/moment";
 import Head from "next/head";
-
 export default function E(){
     const router = useRouter();
     let get_id = router.query.id;
@@ -76,8 +75,8 @@ export default function E(){
                 
                 <div className={homestyles.container}>
                     <TopNavComponent setOpened={setOpened} setScroll={setScroll}/>
-
                     <div className='overviewContainer'>
+                        
                         {
                         loading==true ? <h1>loading...</h1>
                         :(

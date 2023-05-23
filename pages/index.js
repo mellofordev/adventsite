@@ -61,7 +61,7 @@ export default function Home() {
                :(
                  <div style={{height:200}}>
                   <h1>See Today's events</h1>
-                  <button className='buttonMain'>check</button>
+                  <button className='buttonMain' onClick={()=>router.push('/happening')}>check</button>
                  </div>
                  
                )}
