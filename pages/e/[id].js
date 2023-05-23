@@ -66,7 +66,7 @@ export default function E(){
                 )
             } 
             <Head>
-                <meta property="og:image" itemProp="image" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
+                <meta property="og:image:secure_url" itemProp="image" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
                 <meta property="og:image:type" content="image/jpeg"></meta>
             </Head>
             {isopened==true && 
