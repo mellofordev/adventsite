@@ -13,6 +13,8 @@ export default function TopNavComponent({setOpened,setScroll}){
         <>
         <Head>
             <meta name='theme-color' color='#1f1f1f'/>
+            <meta property="og:site_name" content="Advent"></meta>
+            <meta property="og:title" content="Tech fest of SCTCE"></meta>
             <meta name="description" content="Advent is the technical fest of SCTCE,TVM brought you by Cult a way"></meta>
             <meta name='keywords' content='Advent, sctce college and tech fest,cultaway advent, advent, SCTCE, Sree Chitra Thirunal College of Engineering, Cult A Way, Cult A Way 2023,'/>
             <title>Advent '23</title>
