@@ -16,7 +16,7 @@ export default function TopNavComponent({setOpened,setScroll}){
             <meta name="description" content="Advent is the technical fest of SCTCE,TVM brought you by Cult a way"></meta>
             <meta name='keywords' content='Advent, sctce college and tech fest,cultaway advent, advent, SCTCE, Sree Chitra Thirunal College of Engineering, Cult A Way, Cult A Way 2023,'/>
             <title>Advent '23</title>
-            <link rel="icon" type="image/png" href="advent_logo/advent_color_plain.png"></link>
+            <link rel="icon" type="image/png" href="advent_logo/adventog.png"></link>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         </Head>
         <header className={styles.header}>
