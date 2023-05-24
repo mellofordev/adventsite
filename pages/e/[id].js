@@ -43,9 +43,6 @@ export default function E(){
     },[router])
     return(
         <>
-            <span itemProp="image" itemScope itemType="image/jpeg"> 
-                <link itemProp="url" href={`https://adventapi.pythonanywhere.com${data.event_pic}`}></link> 
-            </span>
             {isscroll==true ?
                 <style jsx global>
                     {`
@@ -65,7 +62,7 @@ export default function E(){
                 )
             } 
             <Head>
-                <meta property="og:image:secure_url" itemProp="image" content={`https://adventapi.pythonanywhere.com${data.event_pic}`} />
+                <meta property="og:image" itemProp="image" content={`https://advent.cultaway.in/api/og?url=${data.event_pic}`} />
                 <meta property="og:image:type" content="image/jpeg"></meta>
             </Head>
             {isopened==true && 
