@@ -62,8 +62,10 @@ export default function E(){
                 )
             } 
             <Head>
-                <meta property="og:image" itemProp="image" content={`https://advent.cultaway.in/api/og?url=${data.event_pic}`} />
-                <meta property="og:image:type" content="image/jpeg"></meta>
+                <meta property="og:site_name" content="Advent"></meta>
+                <meta property="og:title" content="Advent"></meta>
+                <meta property="og:image"  content={`https://advent.cultaway.in/api/og?url=${data.event_pic}`} />
+                <meta property="og:image:type" content="image/jpg"></meta>
             </Head>
             {isopened==true && 
             <MobileNav setOpened={setOpened} setScroll={setScroll}/>
