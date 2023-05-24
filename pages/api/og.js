@@ -14,8 +14,8 @@ export default function (req,res){
        ( <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'100%',width:'100%'}}>
             <img src={'https://adventapi.pythonanywhere.com'+url} style={{height:'100%',width:'100%'}}/>
         </div>),{
-      width: 300,
-      height: 200,
+      width: 640,
+      height: 640,
     },
     );
 }
