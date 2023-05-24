@@ -12,7 +12,10 @@ export default function (req,res){
     }
     return new ImageResponse(
        ( <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'100%',width:'100%'}}>
-            <img src={'https://adventapi.pythonanywhere.com'+url}/>
-        </div>)
+            <img src={'https://adventapi.pythonanywhere.com'+url} style={{height:400,width:400}}/>
+        </div>),{
+      width: 400,
+      height: 400,
+    },
     );
 }
