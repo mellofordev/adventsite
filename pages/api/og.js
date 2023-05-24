@@ -9,7 +9,7 @@ export default function (){
     const image = search.get('url');
     return ImageResponse(
         <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'100%',width:'100%'}}>
-            <img src={url}/>
+            <img src={'https://adventapi.pythonanywhere.com'+url}/>
         </div>
     );
 }
