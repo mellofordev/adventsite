@@ -20,7 +20,7 @@ export default function Home() {
   const [isopened,setOpened]=useState(false);
   const [isscroll,setScroll] = useState(true);
   const router = useRouter();
-  const isTimerShown = true;
+  const isTimerShown = false;
   return (
     <>
     {isscroll==true ?
