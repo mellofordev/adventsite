@@ -60,9 +60,8 @@ export default function Home() {
                {isTimerShown==true ?  <h1>Let's go It's Advent May 30,2023</h1> 
                :(
                  <div style={{height:200}}>
-                  <h1>Let's go It's Advent</h1>
-                  <p>check out the today's events</p>
-                  <button className='buttonMain' onClick={()=>router.push('/happening')}>check</button>
+                  <h1>It's a wrap for Advent</h1>
+                  <p>See you all at Cult a way</p>
                  </div>
                  
                )}
